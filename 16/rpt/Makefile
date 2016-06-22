@@ -1,27 +1,27 @@
 LATEX = latex
 DVIPS = dvips -t letter
-PAPERNAME = rpt
+PPR = rpt
 
 pdf: full good
-	ps2pdf $(PAPERNAME).ps
+	ps2pdf $(PPR).ps
 
 full: figs 
-	$(LATEX) $(PAPERNAME)
-	#bibtex $(PAPERNAME)
-	#$(LATEX) $(PAPERNAME)
-	#$(LATEX) $(PAPERNAME)
-	#$(LATEX) $(PAPERNAME)
+	$(LATEX) $(PPR)
+	#bibtex $(PPR)
+	#$(LATEX) $(PPR)
+	#$(LATEX) $(PPR)
+	#$(LATEX) $(PPR)
 
-good: $(PAPERNAME).dvi
-	$(DVIPS) -D 600 $(PAPERNAME) -o
+good: $(PPR).dvi
+	$(DVIPS) -D 600 $(PPR) -o
 
 cleanup:
-	-@rm *.dvi *.blg *.bbl *.aux *.log
+	-@rm $(PPR).dvi $(PPR).blg $(PPR).bbl $(PPR).aux $(PPR).log
 	#-@rm *.eps
 	#-@rm games/hexdiag/*.hexdiag
 
 clean: cleanup
-	-@rm *.ps *.pdf
+	-@rm $(PPR).ps $(PPR).pdf
 
 figs:
 	(cd games/hexdiag; perl make10.pl)

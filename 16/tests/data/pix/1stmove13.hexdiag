@@ -1,0 +1,18 @@
+/DimX 13 def
+/DimY 13 def
+/Scale 1.2 def
+FlatTopBoard
+DrawHexBoard
+1 HexBoardBorders
+AltHexBoardCoordinates
+8 1 HexBlackPiece
+3 13 HexBlackPiece
+8 13 HexBlackPiece
+4 1 HexBlackPiece
+
+10 1 HexWhitePiece
+2 10 HexWhitePiece
+11 1 HexWhitePiece
+2 4 HexWhitePiece
+
+7 1 HexBlackMarkedPiece

@@ -1,25 +1,25 @@
 LATEX = latex
 DVIPS = dvips -t letter
-PAPERNAME = info
+PPR = info
 
 pdf: full good
-	ps2pdf $(PAPERNAME).ps
+	ps2pdf $(PPR).ps
 
 full: figs 
-	$(LATEX) $(PAPERNAME)
-	#bibtex $(PAPERNAME)
-	#$(LATEX) $(PAPERNAME)
-	#$(LATEX) $(PAPERNAME)
-	#$(LATEX) $(PAPERNAME)
+	$(LATEX) $(PPR)
+	#bibtex $(PPR)
+	#$(LATEX) $(PPR)
+	#$(LATEX) $(PPR)
+	#$(LATEX) $(PPR)
 
-good: $(PAPERNAME).dvi
-	$(DVIPS) -D 600 $(PAPERNAME) -o
+good: $(PPR).dvi
+	$(DVIPS) -D 600 $(PPR) -o
 
 cleanup:
-	-@rm *.dvi *.blg *.bbl *.aux *.log
+	-@rm $(PPR).dvi $(PPR).blg $(PPR).bbl $(PPR).aux $(PPR).log
 
 clean: cleanup
-	-@rm *.ps *.pdf data/pix/*.eps
+	-@rm $(PPR).ps $(PPR).pdf data/pix/*.eps
 
 figs:
 	(cd data/pix; perl make10.pl)
