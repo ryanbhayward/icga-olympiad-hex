@@ -1,0 +1,46 @@
+/DimX 13 def
+/DimY 13 def
+/Scale 1.2 def
+FlatTopBoard
+DrawHexBoard
+1 HexBoardBorders
+AltHexBoardCoordinates
+1 1 HexBlackMarker
+2 1 HexBlackMarker
+3 1 HexBlackMarker
+4 1 HexBlackMarker
+5 1 HexBlackMarker
+6 1 HexBlackMarker
+7 1 HexBlackMarker
+1 2 HexBlackMarker
+13 2 HexBlackMarker
+1 3 HexBlackMarker
+13 3 HexBlackMarker
+1 4 HexBlackMarker
+13 4 HexBlackMarker
+1 5 HexBlackMarker
+13 5 HexBlackMarker
+1 6 HexBlackMarker
+13 6 HexBlackMarker
+1 7 HexBlackMarker
+2 7 HexBlackMarker
+12 7 HexBlackMarker
+13 7 HexBlackMarker
+1 8 HexBlackMarker
+13 8 HexBlackMarker
+1 9 HexBlackMarker
+13 9 HexBlackMarker
+1 10 HexBlackMarker
+13 10 HexBlackMarker
+1 11 HexBlackMarker
+13 11 HexBlackMarker
+1 12 HexBlackMarker
+12 12 HexBlackMarker
+13 12 HexBlackMarker
+7 13 HexBlackMarker
+8 13 HexBlackMarker
+9 13 HexBlackMarker
+10 13 HexBlackMarker
+11 13 HexBlackMarker
+12 13 HexBlackMarker
+13 13 HexBlackMarker

@@ -1,0 +1,64 @@
+/DimX 11 def
+/DimY 11 def
+/Scale 1.2 def
+FlatTopBoard
+DrawHexBoard
+1 HexBoardBorders
+AltHexBoardCoordinates
+
+7 1 (1) 1 HexBlackLabelledPiece 
+7 1 (S) 1 HexBlackLabelledPiece
+9 3 (3) 1 HexWhiteLabelledPiece 
+6 8 (4) 1 HexBlackLabelledPiece 
+10 4 (5) 1 HexWhiteLabelledPiece 
+9 6 (6) 1 HexBlackLabelledPiece 
+11 5 (7) 1 HexWhiteLabelledPiece 
+10 7 (8) 1 HexBlackLabelledPiece 
+8 7 (9) 1 HexWhiteLabelledPiece 
+8 4 (10) 2 HexBlackLabelledPiece 
+2 8 (11) 2 HexWhiteLabelledPiece 
+5 2 (12) 2 HexBlackLabelledPiece 
+2 5 (13) 2 HexWhiteLabelledPiece 
+3 3 (14) 2 HexBlackLabelledPiece 
+6 2 (15) 2 HexWhiteLabelledPiece 
+4 8 (16) 2 HexBlackLabelledPiece 
+3 9 (17) 2 HexWhiteLabelledPiece 
+3 8 (18) 2 HexBlackLabelledPiece 
+2 9 (19) 2 HexWhiteLabelledPiece 
+3 7 (20) 2 HexBlackLabelledPiece 
+8 6 (21) 2 HexWhiteLabelledPiece 
+9 4 (22) 2 HexBlackLabelledPiece 
+10 3 (23) 2 HexWhiteLabelledPiece 
+9 5 (24) 2 HexBlackLabelledPiece 
+9 7 (25) 2 HexWhiteLabelledPiece 
+10 6 (26) 2 HexBlackLabelledPiece 
+2 7 (27) 2 HexWhiteLabelledPiece 
+7 6 (28) 2 HexBlackLabelledPiece 
+3 6 (29) 2 HexWhiteLabelledPiece 
+4 5 (30) 2 HexBlackLabelledPiece 
+7 5 (31) 2 HexWhiteLabelledPiece 
+8 5 (32) 2 HexBlackLabelledPiece 
+1 4 (33) 2 HexWhiteLabelledPiece 
+2 2 (34) 2 HexBlackLabelledPiece 
+5 4 (35) 2 HexWhiteLabelledPiece 
+5 3 (36) 2 HexBlackLabelledPiece 
+4 4 (37) 2 HexWhiteLabelledPiece 
+6 3 (38) 2 HexBlackLabelledPiece 
+3 2 (39) 2 HexWhiteLabelledPiece 
+2 3 (40) 2 HexBlackLabelledPiece 
+7 4 (41) 2 HexWhiteLabelledPiece 
+5 5 (42) 2 HexBlackLabelledPiece 
+5 6 (43) 2 HexWhiteLabelledPiece 
+4 6 (44) 2 HexBlackLabelledPiece 
+6 7 (45) 2 HexWhiteLabelledPiece 
+6 6 (46) 2 HexBlackLabelledPiece 
+11 7 (47) 2 HexWhiteLabelledPiece 
+11 6 (48) 2 HexBlackLabelledPiece 
+5 7 (49) 2 HexWhiteLabelledPiece 
+6 5 (50) 2 HexBlackLabelledPiece 
+4 2 (51) 2 HexWhiteLabelledPiece 
+3 5 (52) 2 HexBlackLabelledPiece 
+1 2 (53) 2 HexWhiteLabelledPiece 
+2 6 (54) 2 HexBlackLabelledPiece 
+1 6 (55) 2 HexWhiteLabelledPiece 
+1 7 (56) 2 HexBlackLabelledPiece 

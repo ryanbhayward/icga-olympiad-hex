@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: rpt15long.aux
+The style file: icgacite.bst
+Database file #1: rpt.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 1 entry,
+            3157 wiz_defined-function locations,
+            658 strings with 5481 characters,
+and the built_in function-call counts, 742 in all, are:
+= -- 69
+> -- 45
+< -- 3
++ -- 15
+- -- 15
+* -- 61
+:= -- 129
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 8
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 27
+empty$ -- 47
+format.name$ -- 15
+if$ -- 153
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 1
+newline$ -- 9
+num.names$ -- 7
+pop$ -- 12
+preamble$ -- 1
+purify$ -- 9
+quote$ -- 0
+skip$ -- 22
+stack$ -- 0
+substring$ -- 30
+swap$ -- 10
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 0
+while$ -- 8
+width$ -- 2
+write$ -- 23

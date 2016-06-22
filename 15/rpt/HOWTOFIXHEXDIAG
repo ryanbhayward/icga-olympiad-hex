@@ -1,0 +1,4 @@
+fix 13x13 hexdiag files like this:
+
+sed -i -- 's/DimX 11/DimX 13/g' 13*.hexdiag
+sed -i -- 's/DimY 11/DimY 13/g' 13*.hexdiag
