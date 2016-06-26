@@ -1,6 +1,9 @@
 \documentclass{icga}
-\newif\iflong\longtrue
-\newif\ifshort\shortfalse
+\newif\iflong\longfalse  %change to longtrue for longer version
+% additional long version material like this:
+% \iflong
+% ... long version material ...
+% \fi
 
 \usepackage{graphicx}
 \def\Eo{\mbox{\sc Ezo}}
@@ -27,9 +30,13 @@ Tony van der Valk\thanks{Email:tony@hexboard.com}
 \begin{document}
 \maketitle
 
+\iflong
+In the longer version of the report, we include all games.
+\fi
+
 \vspace*{-2.25in}
 %{\it ICGA Journal Vol.\ XX No.\ YY Sept 999 pp ??-??
-%\hfill Computer Games Olympiad, 2015 Leiden.}
+%\hfill Computer Games Olympiad, 2016 Leiden.}
 {\it to appear, ICGA Journal}
 \vspace*{2.0in}
 
@@ -44,7 +51,7 @@ TODO: new pix
 
 
 \section{The Tournaments}
-At the 2016 Olympiad there were
+The 2016 Olympiad included
 two Hex tournaments: 11$\times$11 and 13$\times$13.
 Three programs competed in the 11$\times$11 tournament:
 \Eo{} by Kei Takada, supervised by Masahito Yamamoto, from Japan;
@@ -105,6 +112,9 @@ Post-game win-detection is by our solver.
 \end{tabular}\hfill~
 
 Here are some selected games.
+\iflong
+This is the longer version, so we include all games.
+\fi
 
 {\bf Game 1.}
 {\sc E-M 0-1.}
