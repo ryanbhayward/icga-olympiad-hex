@@ -30,14 +30,11 @@
 /CircleRadius 3.0 Scale mul def 
 /CircleLineWidth 0.346 Scale mul def 
 /PerimeterWidth 0.5 Scale mul def 
-/TextHeight 5.0 def
+/TextHeight 4.5 def
 /TextWidth TextHeight 0.45 mul def 
 /BoardShade 0.8 def
-/Dark 0.65 def
-/DotSize 1.3 def
 /CoordinatesShade 0.5 def
-%/MarkerSize 1.2 def
-/MarkerSize  .7 def
+/MarkerSize 1.2 def
 /CellOrientation 1 def   % 1: flat bottom  0: pointed bottom
 /CellCorner [ % 6 cell corners, wrt center 0 0, plus "up" and "down"
    [ HexRadius  neg       0                           ] 
@@ -228,12 +225,6 @@ end } def
 
 /NoDrawHexBoard {  % dummy, used in creating bounding box
 } def
-
-/HexBoardBottom { 1 dict begin
-    /upperLeftBlack exch def
-    PerimeterWidth setlinewidth 0 setgray
-    DownRight upperLeftBlack       DimY 1 DrawHexBorder
-end } def
 
 /HexBoardBorders { 1 dict begin
     /upperLeftBlack exch def
@@ -455,62 +446,37 @@ DrawHexBoard
 1 HexBoardBorders
 AltHexBoardCoordinates
 
-7 1 (1) 1 HexBlackLabelledPiece 
-7 1 (S) 1 HexBlackLabelledPiece
-9 3 (3) 1 HexWhiteLabelledPiece 
-6 8 (4) 1 HexBlackLabelledPiece 
-10 4 (5) 1 HexWhiteLabelledPiece 
-9 6 (6) 1 HexBlackLabelledPiece 
-11 5 (7) 1 HexWhiteLabelledPiece 
-10 7 (8) 1 HexBlackLabelledPiece 
-8 7 (9) 1 HexWhiteLabelledPiece 
-8 4 (10) 2 HexBlackLabelledPiece 
-2 8 (11) 2 HexWhiteLabelledPiece 
-5 2 (12) 2 HexBlackLabelledPiece 
-2 5 (13) 2 HexWhiteLabelledPiece 
-3 3 (14) 2 HexBlackLabelledPiece 
-6 2 (15) 2 HexWhiteLabelledPiece 
-4 8 (16) 2 HexBlackLabelledPiece 
-3 9 (17) 2 HexWhiteLabelledPiece 
-3 8 (18) 2 HexBlackLabelledPiece 
-2 9 (19) 2 HexWhiteLabelledPiece 
-3 7 (20) 2 HexBlackLabelledPiece 
-8 6 (21) 2 HexWhiteLabelledPiece 
-9 4 (22) 2 HexBlackLabelledPiece 
-10 3 (23) 2 HexWhiteLabelledPiece 
-9 5 (24) 2 HexBlackLabelledPiece 
-9 7 (25) 2 HexWhiteLabelledPiece 
-10 6 (26) 2 HexBlackLabelledPiece 
-2 7 (27) 2 HexWhiteLabelledPiece 
-7 6 (28) 2 HexBlackLabelledPiece 
-3 6 (29) 2 HexWhiteLabelledPiece 
-4 5 (30) 2 HexBlackLabelledPiece 
-7 5 (31) 2 HexWhiteLabelledPiece 
-8 5 (32) 2 HexBlackLabelledPiece 
-1 4 (33) 2 HexWhiteLabelledPiece 
-2 2 (34) 2 HexBlackLabelledPiece 
-5 4 (35) 2 HexWhiteLabelledPiece 
-5 3 (36) 2 HexBlackLabelledPiece 
-4 4 (37) 2 HexWhiteLabelledPiece 
-6 3 (38) 2 HexBlackLabelledPiece 
-3 2 (39) 2 HexWhiteLabelledPiece 
-2 3 (40) 2 HexBlackLabelledPiece 
-7 4 (41) 2 HexWhiteLabelledPiece 
-5 5 (42) 2 HexBlackLabelledPiece 
-5 6 (43) 2 HexWhiteLabelledPiece 
-4 6 (44) 2 HexBlackLabelledPiece 
-6 7 (45) 2 HexWhiteLabelledPiece 
-6 6 (46) 2 HexBlackLabelledPiece 
-11 7 (47) 2 HexWhiteLabelledPiece 
-11 6 (48) 2 HexBlackLabelledPiece 
-5 7 (49) 2 HexWhiteLabelledPiece 
-6 5 (50) 2 HexBlackLabelledPiece 
-4 2 (51) 2 HexWhiteLabelledPiece 
-3 5 (52) 2 HexBlackLabelledPiece 
-1 2 (53) 2 HexWhiteLabelledPiece 
-2 6 (54) 2 HexBlackLabelledPiece 
-1 6 (55) 2 HexWhiteLabelledPiece 
-1 7 (56) 2 HexBlackLabelledPiece 
+6 1 (1) 1 HexBlackLabelledPiece 
+9 3 (2) 1 HexWhiteLabelledPiece 
+7 7 (3) 1 HexBlackLabelledPiece 
+6 7 (4) 1 HexWhiteLabelledPiece 
+7 5 (5) 1 HexBlackLabelledPiece 
+8 5 (6) 1 HexWhiteLabelledPiece 
+7 6 (7) 1 HexBlackLabelledPiece 
+9 6 (8) 1 HexWhiteLabelledPiece 
+8 8 (9) 1 HexBlackLabelledPiece 
+7 8 (10) 2 HexWhiteLabelledPiece 
+8 7 (11) 2 HexBlackLabelledPiece 
+10 7 (12) 2 HexWhiteLabelledPiece 
+9 9 (13) 2 HexBlackLabelledPiece 
+11 8 (14) 2 HexWhiteLabelledPiece 
+10 10 (15) 2 HexBlackLabelledPiece 
+9 10 (16) 2 HexWhiteLabelledPiece 
+10 9 (17) 2 HexBlackLabelledPiece 
+8 9 (18) 2 HexWhiteLabelledPiece 
+9 8 (19) 2 HexBlackLabelledPiece 
+5 6 (20) 2 HexWhiteLabelledPiece 
+6 4 (21) 2 HexBlackLabelledPiece 
+4 5 (22) 2 HexWhiteLabelledPiece 
+5 3 (23) 2 HexBlackLabelledPiece 
+3 4 (24) 2 HexWhiteLabelledPiece 
+3 3 (25) 2 HexBlackLabelledPiece 
+4 3 (26) 2 HexWhiteLabelledPiece 
+5 1 (27) 2 HexBlackLabelledPiece 
+6 3 (28) 2 HexWhiteLabelledPiece 
+5 4 (29) 2 HexBlackLabelledPiece 
+4 2 (30) 2 HexWhiteLabelledPiece 
+4 1 (31) 2 HexBlackLabelledPiece 
 
 
 %------------ Trailer --------------
