@@ -1,0 +1,7 @@
+(;AP[HexGui:0.9.0]FF[4]GM[11]SZ[13];B[a7];W[i4];B[j4];W[i6];B[h6];W[h7];
+B[g7];W[f9];B[e9];W[f8];B[g8];W[g9];B[h8];W[h9];B[i9];W[i8];B[e8];W[f7];
+B[e7];W[d11];B[e10];W[e11];B[f10];W[f11];B[g10];W[f5];B[g11];W[d6];B[f6]
+;W[g5];B[e5];W[e6];B[g6];W[j3];B[h4];W[h5];B[k3];W[i5];B[j6];W[j5];B[c7]
+;W[c5];B[c6];W[d4](;B[d5];W[f3])(;B[b5];W[c3];B[a4];W[b2];B[d7];W[l4];
+B[d5];W[f3];B[f4];W[g3];B[g4];W[i2];B[h2];W[h3];B[j2];W[i3];B[e3];W[e4])
+)
