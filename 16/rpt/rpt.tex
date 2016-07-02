@@ -15,7 +15,7 @@
 \def\Fuego{\mbox{\sc Fuego}}
 \def\TV{\mbox{\sc TV}} %Tony van der Valk
 
-\title{\sc MOHEX WINS HEX 11x11 TOURNAMENT, ??? WINS HEX 13x13}
+\title{\sc MOHEX WINS HEX 11x11 AND 13x13 TOURNAMENTS}
 \runningtitle{ICGA}
 \author{Ryan Hayward\thanks{Department 
 of Computing Science, University of Alberta, Canada. Email:hayward@ualberta.ca},
@@ -42,31 +42,48 @@ In the longer version of the report, we include all games.
 \vspace*{2.0in}
 
 \begin{figure}[hbt]
-%\includegraphics[width=225pt]{edo0.eps}\
-%\includegraphics[width=225pt]{rjt2.eps}\\
-TODO: new pix
-
-%\hfill\includegraphics[width=280pt]{mas.eps}\hfill~
+\includegraphics[width=225pt]{photos/pick.eps}\
+\includegraphics[width=225pt]{photos/picr.eps}
 \caption{Participants and observers at the Hex competitions.}
 \end{figure}
 
-
 \section{The Tournaments}
-The 2016 Olympiad included
-two Hex tournaments: 11$\times$11 and 13$\times$13.
-Three programs competed in the 11$\times$11 tournament:
+There were two Hex tournaments at the 2016 Olympiad:
+board size 11$\times$11 and board size 13$\times$13.
+Three programs competed in each tournament:
 \Eo{} by Kei Takada, supervised by Masahito Yamamoto, from Japan;
 \Hz{} by Tianli Zhang from China; and
 \Mx{} 2.0 \citebay{HAHMP13}, 
 by Broderick Arneson, Ryan Hayward, Philip Henderson, Aja Huang, 
-Jakub Pawlewicz, and Noah Weninger, from Canada.
+Jakub Pawlewicz, Noah Weninger, and Kenny Young from Canada.
 
-Three programs competed in the 13$\times$13 tournament:
-\Eo{}, \Hz{}, and \Mt{} from Canada,
-with the same authors as \Mx{}, plus Kenny Young.
+\Mx{}, the winner of the previous six Olympiad Hex competitions
+\citebay{HAHP13},
+is an MCTS program that uses the Benzene Hex framework
+built on the code base of \Fuego\ \citebay{fuego}.
+%the Go program developed by Martin M\"{u}ller, Markus Enzenberger
+%and others at the University of Alberta.
+%Benzene allows virtual connection and
+%inferior cell computations.
+\Mx{} performs knowledge computation in UCT tree nodes visited at least 256 times.
+\Mx{} ran on Firecreek, a 24 core shared-memory machine, 
+with 4 cores reserved for the 
+DFPNS solver \citebay{PawlH13}, which
+produces perfect play if it solves the
+position within the time allotted.
+\Mx{} uses a book ---
+built by Broderick Arneson with Thomas Lincke's method 
+\citebay{DBLP:conf/cg/Lincke00}. 
+Noah Weninger expanded the book and added a feature
+allowing the use of rotational symmetry for openings
+whose rotation is in the book.
+For each board size, the book covers at least eight openings.
 
 \Eo{} is a stronger version of the program that competed in the 2015 Olympiad.
-\Eo{} is based on the Benzene framework and uses iterative deepening depth-first search with an evaluation function based on a weighted combination of some network connectivity measures \citebay{TakadaHIY15}.
+\Eo{}, now based on the Benzene framework, 
+uses iterative deepening depth-first search 
+with an evaluation function using a linear combination of
+two network connectivity measures \citebay{TakadaHIY15}.
 \Eo{} ran on two threads of an i7 4790 laptop,
 with one thread for search and one thread for
 Benzene's Depth-First Proof Number Search endgame solver.
@@ -74,42 +91,19 @@ Benzene's Depth-First Proof Number Search endgame solver.
 \Hz{} is a new MCTS program written by Tianli Zhang from 
 Beijing Institute of Technology.
 
-\Mx{}, the winner of the previous five Olympiad Hex competitions
-\citebay{HAHP13},
-is an MCTS program that uses the Benzene Hex framework
-built on the code base of \Fuego\ \citebay{fuego},
-the Go program developed by Martin M\"{u}ller, Markus Enzenberger
-and others at the University of Alberta.
-Benzene allows virtual connection and
-inferior cell computations.
-\Mx{} performs these computations in UCT tree nodes visited at least 256 times.
-\Mx{} ran on Firecreek, a 24 core shared-memory machine, 
-with 4 cores reserved for the 
-Depth-First Proof Number Search solver \citebay{PawlH13}, which
-produces perfect play if it solves the
-position within the time allotted for a move.
-\Mx{} uses a book ---
-built by Broderick Arneson with Thomas Lincke's method 
-\citebay{DBLP:conf/cg/Lincke00}
-and expanded by Noah Weninger ---
-with eight 11$\times$11 openings.
-
-\Mt{} is a new hybrid program that combines
-the \Mx{} MCTS search tree with a 
-depth-1 tree created by calling \Nx{}, 
-a Deep Convolution Neural Net \citebay{YoungVH16}, once from the root.
-
 Each tournament was a three-player double round robin, so 12 games
 in total with 8 games per player.
-Post-game win-detection is by our solver.
-%Tony van der Walk contributed to this commentary.
 
-{\large\bf 11$\times$11 Tournament}
-
-The tournament comprised two double round robins.
-Round 1 took place on June 27, Round 2 on June 28.
-The last two games were not played,
-as the outcome had already been decided.
+{\large\bf 11$\times$11 Tournament.}
+The tournment took place on June 26 and 27.
+The final two scheduled games were not played,
+as by then the outcome had been decided.
+After the tournament, \Mx\ and \Eo\ played two 
+exhibition same-resource games,
+with one thread for the search and one
+thread for the solver. They each won one game.
+In the tournament, the operator usually resigned
+once the Benzene solver detected a win or loss.
 
 \hfill\begin{tabular}{|c|c|c|c|c|c|}
 \hline 11x11 results &\Mx{} &\Eo{}  & \Hz{}  & total & result \\ 
@@ -119,215 +113,213 @@ as the outcome had already been decided.
 \hline
 \end{tabular}\hfill~
 
-Here are some selected games.
 \iflong
 This is the longer version, so we include all games.
 \fi
 
-{\bf Game 1.}
-{\sc E-M 0-1.}
-1.B[a9] 2.W[b10] 3.B[f7] \ldots ~ ~ 
 
-{\bf Game 2.}
-{\sc M-H 1-0.}
-1.B[a2] 2.W[b9] 3.B[e7] \ldots ~ ~ 
-
-{\bf Game 3.}
-{\sc H-E 0-1.}
-1.B[a2] 2.W[swap] 3.B[g5] \ldots ~ ~ 
-
-{\bf Game 4.}
-{\sc M-E 1-0.}
-1.B[a6] 2.W[c9] 3.B[g7] \ldots ~ ~ 
-
-{\bf Game 5.}
-{\sc H-M 0-1.}
-1.B[a2] 2.W[g5] 3.B[f5] \ldots ~ ~ 
-
-{\bf Game 6.}
-{\sc E-H 1-0.}
-1.B[a2] 2.W[b9] 3.B[e7] \ldots ~ ~ 
+%{\bf Game 1.}
+%{\sc E-M 0-1.}
+%1.B[a9] 2.W[b10] 3.B[f7] \ldots ~ ~ 
+%
+%{\bf Game 2.}
+%{\sc M-H 1-0.}
+%1.B[a2] 2.W[b9] 3.B[e7] \ldots ~ ~ 
+%
+%{\bf Game 3.}
+%{\sc H-E 0-1.}
+%1.B[a2] 2.W[swap] 3.B[g5] \ldots ~ ~ 
+%
+%{\bf Game 4.}
+%{\sc M-E 1-0.}
+%1.B[a6] 2.W[c9] 3.B[g7] \ldots ~ ~ 
+%
+%{\bf Game 5.}
+%{\sc H-M 0-1.}
+%1.B[a2] 2.W[g5] 3.B[f5] \ldots ~ ~ 
+%
+%{\bf Game 6.}
+%{\sc E-H 1-0.}
+%1.B[a2] 2.W[b9] 3.B[e7] \ldots ~ ~ 
+%
+%{\bf Game 7.}
+%{\sc E-M 0-1.}
+%1.B[k5] 2.W[e7] 3.B[g6] \ldots ~ ~ 
+%
+%{\bf Game 8.}
+%{\sc M-H 1-0.}
+%1.B[a7] 2.W[swap] 3.B[g5] \ldots ~ ~ 
+%
+%{\bf Game 9.}
+%{\sc H-E 0-1.}
+%1.B[a2] 2.W[swap] 3.B[j3] \ldots ~ ~ 
+%
+%{\bf Game 10.}
+%{\sc M-E 1-0.}
+%1.B[a6] 2.W[c9] 3.B[g7] \ldots ~ ~ 
+%
+%\begin{figure}[hbp]
+%\includegraphics[scale=1.3]{games/pix/01-em-0-1.eps}\hspace*{-1cm}\
+%\includegraphics[scale=1.3]{games/pix/01-em-completion.eps}\
+%\caption{Game 1: \Eo-\Mx\ 0-1. Black resigned after move 34 (on left), when it saw the loss.}
+%\end{figure}
+%
+%\begin{figure}[hbp]
+%\includegraphics[scale=1.3]{games/pix/10-me-1-0.eps}\hspace*{-1cm}\
+%\includegraphics[scale=1.3]{games/pix/10-me-completion.eps}
+%\caption{Game 10: \Mx-\Eo\ 1-0. Black resigned after move 38 (on left), when it saw the loss.}
+%\end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/01-em-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/01-em-completion.eps}
-\caption{Game 1: \Eo-\Mx\ 0-1. Black resigned after move 34, when it saw the loss.}
+\hspace*{-2.5cm}\
+%\includegraphics[scale=1.3]{games/pix/01-em-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/01-em-completion.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/02-mh-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/03-he-0-1.eps}
+\caption{Game 1: \Eo-\Mx\ 0-1. Game 2: \Mx-\Hz\ 1-0. Game 3: \Hz-\Eo\ 0-1.} 
 \end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/10-me-1-0.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/10-me-completion.eps}
-\caption{Game 10: \Mx-\Eo\ 1-0. Black resigned after move 38, when it saw the loss.}
+\hspace*{-2.5cm}\
+\includegraphics[scale=1.2]{games/pix/04-me-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/05-hm-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/06-eh-1-0.eps}
+\caption{Game 4: \Mx-\Eo\ 1-0. Game 5: \Hz-\Mx\ 0-1. Game 6: \Eo-\Hz\ 1-0.}
 \end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/01-em-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/02-mh-1-0.eps}
-\caption{Game 1: \Eo-\Mx\ 0-1. Game 2: \Mx-\Hz\ 1-0.}
+\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/07-em-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/08-mh-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/09-he-0-1.eps}
+\caption{Game 7: \Eo-\Mx\ 0-1. Game 8: \Mx-\Hz\ 1-0. Game 9: \Hz-\Eo\ 0-1.}
 \end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/03-he-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/04-me-1-0.eps}
-\caption{Game 3: \Hz-\Eo\ 0-1. Game 4: \Mx-\Eo\ 1-0.}
+\hspace*{-2cm}\
+%\includegraphics[scale=1.3]{games/pix/10-me-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/10-me-completion.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/em-friendly-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.2]{games/pix/me-friendly-0-1.eps}
+\caption{Game 10: \Mx-\Eo\ 1-0. Exhibition 1-thread games: \Eo-\Mx\ 0-1, \Mx-\Eo\ 0-1.}
 \end{figure}
 
-\begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/05-hm-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/06-eh-1-0.eps}
-\caption{Game 5: \Hz-\Mx\ 0-1. Game 6: \Eo-\Hz\ 1-0.}
-\end{figure}
+~
 
-\begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/07-em-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/08-mh-1-0.eps}
-\caption{Game 7: \Eo-\Mx\ 0-1. Game 8: \Mx-\Hz\ 1-0.}
-\end{figure}
-
-\begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/09-he-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/10-me-1-0.eps}
-\caption{Game 9: \Hz-\Eo\ 0-1. Game 10: \Mx-\Eo\ 1-0.}
-\end{figure}
-
-{\bf Game 7.}
-{\sc E-M 0-1.}
-1.B[k5] 2.W[e7] 3.B[g6] \ldots ~ ~ 
-
-{\bf Game 8.}
-{\sc M-H 1-0.}
-1.B[a7] 2.W[swap] 3.B[g5] \ldots ~ ~ 
-
-{\bf Game 9.}
-{\sc H-E 0-1.}
-1.B[a2] 2.W[swap] 3.B[j3] \ldots ~ ~ 
-
-{\bf Game 10.}
-{\sc M-E 1-0.}
-1.B[a6] 2.W[c9] 3.B[g7] \ldots ~ ~ 
-
-After the tournament, \Eo\ and \Mx\ played two games on similar
-hardware, each with one thread for the search and one for the solver.
-They each won one game.
-
-\begin{figure}[hbp]
-\includegraphics[scale=1.3]{games/pix/em-friendly-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.3]{games/pix/me-friendly-0-1.eps}
-\caption{Friendly games. \Eo-\Mx\ 0-1. \Mx-\Eo\ 0-1.}
-\end{figure}
-
-\newpage
-{\large\bf 13$\times$13 Tournament}
+{\large\bf 13$\times$13 Tournament.}
+The tournament took place on June 30 and July 1.
+As with 11$\times$11, there was clear separation
+between each pair of players.
+In games 10 and 12 \Mx\ played first in the centre,
+allowing the opponent to swap and take what is presumably
+the strongest possible opening move.
 
 \hfill\begin{tabular}{|c|c|c|c|c|c|}
 \hline 13x13 results &\Mx{} &\Eo{}  &\Hz{} & total & result \\ 
 \hline \Mt{}         &      &  4-0  & 4-0  & 8-0   & gold \\
 \hline \Eo{}         &  0-4 &       & 4-0  & 4-4   & silver \\
-\hline \Hz{}         &  0-4 &  0-4  &      & 0-4   & bronze \\
+\hline \Hz{}         &  0-4 &  0-4  &      & 0-8   & bronze \\
 \hline
 \end{tabular}\hfill~
 
-Here are the games.
-
-{\bf Game 1.}
-{\sc E-M 0-1.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 2.}
-{\sc M-H 1-0.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 3.}
-{\sc H-E 0-1.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 4.}
-{\sc M-E 1-0.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 5.}
-{\sc H-M 0-1.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 6.}
-{\sc E-H 1-0.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 7.}
-{\sc E-M 0-1.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 8.}
-{\sc M-H 1-0.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 9.}
-{\sc H-E 0-1.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 10.}
-{\sc M-E 1-0.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 11.}
-{\sc H-M 0-1.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
-
-{\bf Game 12.}
-{\sc E-H 1-0.}
-1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%{\bf Game 1.}
+%{\sc E-M 0-1.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 2.}
+%{\sc M-H 1-0.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 3.}
+%{\sc H-E 0-1.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 4.}
+%{\sc M-E 1-0.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 5.}
+%{\sc H-M 0-1.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 6.}
+%{\sc E-H 1-0.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 7.}
+%{\sc E-M 0-1.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 8.}
+%{\sc M-H 1-0.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 9.}
+%{\sc H-E 0-1.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 10.}
+%{\sc M-E 1-0.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 11.}
+%{\sc H-M 0-1.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
+%
+%{\bf Game 12.}
+%{\sc E-H 1-0.}
+%1.B[?] 2.W[?] 3.B[?] \ldots ~ ~ 
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.2]{games/pix/13-01-em-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.2]{games/pix/13-02-mh-1-0.eps}
-\caption{Game 1: \Eo-\Mx\ 0-1. Game 2: \Mx-\Hz\ 1-0.}
+\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-01-em-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-02-mh-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-03-he-0-1.eps}
+\caption{Game 1: \Eo-\Mx\ 0-1. Game 2: \Mx-\Hz\ 1-0. Game 3: \Hz-\Eo\ 0-1.}
 \end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.2]{games/pix/13-03-he-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.2]{games/pix/13-04-me-1-0.eps}
-\caption{Game 3: \Hz-\Eo\ 0-1. Game 4: \Mx-\Eo\ 1-0.}
+\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-04-me-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-05-hm-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-06-eh-1-0.eps}
+\caption{Game 4: \Mx-\Eo\ 1-0. Game 5: \Hz-\Mx\ 0-1. Game 6: \Eo-\Hz\ 1-0.}
 \end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.2]{games/pix/13-05-hm-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.2]{games/pix/13-06-eh-1-0.eps}
-\caption{Game 5: \Hz-\Mx\ 0-1. Game 6: \Eo-\Hz\ 1-0.}
+\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-07-em-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-08-mh-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-09-he-0-1.eps}
+\caption{Game 7: \Eo-\Mx\ 0-1. Game 8: \Mx-\Hz\ 1-0. Game 9: \Hz-\Eo\ 0-1.}
 \end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1.2]{games/pix/13-07-em-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.2]{games/pix/13-08-mh-1-0.eps}
-\caption{Game 7: \Eo-\Mx\ 0-1. Game 8: \Mx-\Hz\ 1-0.}
-\end{figure}
-
-\begin{figure}[hbp]
-\includegraphics[scale=1.2]{games/pix/13-09-he-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.2]{games/pix/13-10-me-1-0.eps}
-\caption{Game 9: \Hz-\Eo\ 0-1. Game 10: \Mx-\Eo\ 1-0.}
-\end{figure}
-
-\begin{figure}[hbp]
-\includegraphics[scale=1.2]{games/pix/13-11-hm-0-1.eps}\hspace*{-1cm}\
-\includegraphics[scale=1.2]{games/pix/13-12-eh-1-0.eps}
-\caption{Game 11: \Hz-\Mx\ 0-1. Game 12: \Eo-\Hz\ 1-0.}
+\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-10-me-1-0.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-11-hm-0-1.eps}\hspace*{-2cm}\
+\includegraphics[scale=1.1]{games/pix/13-12-eh-1-0.eps}
+\caption{Game 10: \Mx-\Eo\ 1-0. Game 11: \Hz-\Mx\ 0-1. Game 12: \Eo-\Hz\ 1-0.}
 \end{figure}
 
 \section{Conclusions}
-%{\large\bf Conclusions}
-%\Eo{}'s performance was stronger than its record indicates. 
-%It played some strong openings and had winning moves deep
-%into games against \Dx.
-%It was unlucky not to win a game.
+In pre-tournament tests,
+\Eo\ won 65\% of its games against 1-thread \Mx,
+but here the 20-thread search of \Mx\ was too strong.
+\Hz\ played well when allowed the centre against \Mx,
+forcing a long game.
 
-%\Dx\ and \Mx\ were evenly matched, but play different styles.
-%\Mx\ seems stronger in opening and early middle play,
-%but its Monte Carlo simulations cannot handle tactical positions.
-%\Dx\ thrives on tactical positions, and is especially
-%strong in the late middle game in complicated positions.
+The next step is to add neural nets.
+For this tournament,
+the \Mx\ team prepared \Mt{}, a program that combines the
+MCTS tree and a depth-1 tree found by \Nx{}, 
+a Deep Convolution Neural Net \citebay{YoungVH16}.
+On typical swap-game openings,
+\Mt\ wins 55\% of its games against \Mx,
+a small first step towards an AlphaGo-style player.
 
 {\bf Acknowledgements.}
 We thank the NSERC Discovery Grant Program for research funding and
-Martin M\"{u}ller for the loan of his machine.
+Martin M\"{u}ller for the loan of his machine Firecreek.
 \bibliography{rpt}
 \end{document}
