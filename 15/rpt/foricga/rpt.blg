@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: rpt.aux
+The style file: icgacite.bst
+Database file #1: rpt.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 6 entries,
+            3157 wiz_defined-function locations,
+            705 strings with 6856 characters,
+and the built_in function-call counts, 3941 in all, are:
+= -- 398
+> -- 201
+< -- 15
++ -- 67
+- -- 66
+* -- 280
+:= -- 635
+add.period$ -- 19
+call.type$ -- 6
+change.case$ -- 38
+chr.to.int$ -- 5
+cite$ -- 6
+duplicate$ -- 151
+empty$ -- 278
+format.name$ -- 66
+if$ -- 857
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 5
+newline$ -- 35
+num.names$ -- 38
+pop$ -- 64
+preamble$ -- 1
+purify$ -- 44
+quote$ -- 0
+skip$ -- 140
+stack$ -- 0
+substring$ -- 217
+swap$ -- 56
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 0
+while$ -- 44
+width$ -- 7
+write$ -- 119

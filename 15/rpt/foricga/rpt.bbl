@@ -1,0 +1,47 @@
+\newcommand{\etalchar}[1]{{\noexpand\em ~et~al.}}
+\begin{thebibliography}{[100]}
+
+\harmsbibitem{Enzenberger{\etalchar{+}}}{Enzenberger{\etalchar{+}}}{2007--2012}{fuego}{%
+Enzenberger, M., M{\"u}ller, M., Arneson, B., Segal, R., Xie, F., and Huang, A.
+  (2007--2012).
+\newblock Fuego.
+\newblock \url{http://fuego.sourceforge.net/}.}
+
+\harmsbibitem{Hayward{\etalchar{+}}}{Hayward{\etalchar{+}}}{2013}{HAHP13}{%
+Hayward, R.~B., Arneson, B., Huang, S.-C., and Pawlewicz, J. (2013).
+\newblock Mo{H}ex Wins {H}ex Tournament.
+\newblock {\sl ICGA}, Vol.~36, No.~3, pp. 180--183.}
+
+\harmsbibitem{Huang{\etalchar{+}}}{Huang{\etalchar{+}}}{2013}{HAHMP13}{%
+Huang, S., Arneson, B., Hayward, R.~B., M{\"{u}}ller, M., and Pawlewicz, J.
+  (2013).
+\newblock MoHex 2.0: {A} Pattern-Based {MCTS} Hex Player.
+\newblock {\sl Computers and Games - 8th International Conference, {CG} 2013,
+  Yokohama, Japan, August 13-15, 2013, Revised Selected Papers}~(eds. H.~J.
+  van~den Herik, H. Iida, and A. Plaat), Vol. 8427 of {\sl Lecture Notes in
+  Computer Science}, pp. 60--71, Springer.}
+
+\harmsbibitem{Lincke}{Lincke}{2000}{DBLP:conf/cg/Lincke00}{%
+Lincke, T.~R. (2000).
+\newblock Strategies for the Automatic Construction of Opening Books.
+\newblock {\sl Computers and Games}~(eds. T.~A. Marsland and I. Frank), Vol.
+  2063 of {\sl Lecture Notes in Computer Science}, pp. 74--86, Springer.
+\newblock  ISBN 3--540--43080--6.}
+
+\harmsbibitem{Pawlewicz and Hayward}{Pawlewicz and Hayward}{2015a}{PH15}{%
+Pawlewicz, J. and Hayward, R.~B. (2015a).
+\newblock Feature Strength and Parallelization of Sibling Conspiracy Number
+  Search.
+\newblock {\sl Advances in Computer Games - 14th International Conference,
+  {ACG} 2015, Leiden, The Netherlands, July 1-3, 2015, Revised Selected
+  Papers}~(eds. A. Plaat, H.~J. van~den Herik, and W.~A. Kosters), Vol. 9525 of
+  {\sl Lecture Notes in Computer Science}, pp. 198--209, Springer.}
+
+\harmsbibitem{Pawlewicz and Hayward}{Pawlewicz and Hayward}{2015b}{PH15socs}{%
+Pawlewicz, J. and Hayward, R.~B. (2015b).
+\newblock Sibling Conspiracy Number Search.
+\newblock {\sl Proceedings of the Eighth Annual Symposium on Combinatorial
+  Search, {SOCS} 2015, 11-13 June 2015, Ein Gedi, the Dead Sea, Israel.}~(eds.
+  L. Lelis and R. Stern), pp. 105--112, {AAAI} Press.}
+
+\end{thebibliography}
