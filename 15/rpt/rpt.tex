@@ -7,7 +7,7 @@
 \def\Fuego{\mbox{\sc Fuego}}
 \def\TV{\mbox{\sc TV}} %Tony van der Valk
 
-\title{\sc MOHEX WINS HEX 11x11 and HEX 13x13 TOURNAMENTS}
+\title{\sc MOHEX WINS 2015 HEX 11x11 and HEX 13x13 TOURNAMENTS}
 \runningtitle{ICGA}
 \author{Ryan Hayward\thanks{Department 
 of Computing Science, University of Alberta, Canada. Email:hayward@ualberta.ca} and
@@ -16,16 +16,16 @@ Kei Takada\thanks{Hokkaido University, Japan. Email:takada@complex.ist.hokudai.a
 Tony van der Valk\thanks{Email:tony@hexboard.com}
 }
 \affiliation{Edmonton, Canada}
-\issue{???}
+\issue{Volume 39 (2017) IOS Press 60-64}
 
-\setcounter{page}{999}
+\setcounter{page}{60}
 \begin{document}
 \maketitle
 
 \vspace*{-2.25in}
 %{\it ICGA Journal Vol.\ XX No.\ YY Sept 999 pp ??-??
 %\hfill Computer Games Olympiad, 2015 Leiden.}
-{\it to appear, ICGA Journal}
+%{\it ICGA Journal 39 (2017) 60-64}
 \vspace*{2.0in}
 
 \begin{figure}[hbt]
@@ -416,30 +416,30 @@ and Philip Henderson for comments on a draft of this report.
 %Bottom: \Dx-\TV\ 1-0, \TV-\Dx\ 0-1. Each player had 15 minutes to
 %make all moves.}
 \end{document}
-{\bf Tony comments}
-I just pick a few games to comment upon. Hard to know if my comments are better on a par with the outcome of the programs reasoning. 
-For instance, look at 11x11 game 9m-d. In your comment you state 22 J5 is losing. But in my analysis 22 J5, 23 J6, 24 F9 could well be winning. Do you agree? Does Mohex agree?  
-
-Ryan: no, 25.W[e10] wins.
-
-Next look at 13x13 game 6d-m. 
-"Game 6. DEEPHEX-MOHEX 1-0. 1.B[j2] 2.W[g8] 3.W[d10] . . . Another close game. MOHEX blunders with
-54.W[f9]; 54.W[l11] wins. DEEPHEX sees the win soon after." 
-Move 3 should be B[d10] I presume. 
-Perhaps I do not understand te comments here: at move 66 I13 white seems to be winning after all? So what is wrong with 54 W[f9]? 
-
-ome further notes...
-
-First I see now why Game 13.06d-m was lost. Incredible that the program could find such elaborate moves as W[f9] or W[I11]. 
-But when I go back a little further in the game I wonder about 30 W[b6] which is clearly too early. Human players would always play 30Wb11; 31Ba12; 32Wb12; 33Ba13 first and only then 34Wb6. Next the same sequence may happen at the right side of the board, resulting in the position of the attached game. I think this is a white win. 
-
-Ryan: no, solver finds black wins from this state:
-PV j12 j11 i12 i11 h12 h11 g12 g11 f12 f10 j3 i4 i3 h4 h2 h3 i2 g3 g2 e3 f1 d2 e12 d12 e11 d11 f3 e5 g10 f11 d3 e2
-
-In game 13.11e-d Deephex plays remarkably indeed, discarding the obvious connection at a3. However, after 27Ba3 black would face difficulties connecting the black chain on the left to the bottom. I can see no easy win for white after 27Bk4 as played in the game. In your comment you mention that 47Wk11 would be a win for EZO. However black seems to have opportunities to defend against Wk11, of which my analysis in the attached game presents one example. Other progressions are possible too, but I did not yet find a better answer for white. All in all this game shows to me how very deep Deephex is looking into the game! 
-
-In the first playoff game we see white answering very far to the bottom, playing 2Wh12 instead of a usual (human) move like 2Wi10. Next 6Wc8 seems a weak move. As long as white has at least two options to connect it should postpone connecting and strengthen instead, but if white has only one remaining option it seems better to connect right away. This could result in a better position like in the commented game: 6Wb9; 7Bc9; 8Wd7; until 15Wb5. But of course black may answer differently. 
-"Playoff Game 1. MOHEX-DEEPHEX 1-0. 1.B[a7] 2.W[h12] 3.W[c11] . . . DEEPHEX lost earlier when swapping
-this opening, so here it does not swap. MOHEX scores gradually increased, and finds a win by move 46."
-I guess move three has to be 3.B[c11]? 
-I can see that in the game 47Bj6 is a winning move. 
+%{\bf Tony comments}
+%I just pick a few games to comment upon. Hard to know if my comments are better on a par with the outcome of the programs reasoning. 
+%For instance, look at 11x11 game 9m-d. In your comment you state 22 J5 is losing. But in my analysis 22 J5, 23 J6, 24 F9 could well be winning. Do you agree? Does Mohex agree?  
+%
+%Ryan: no, 25.W[e10] wins.
+%
+%Next look at 13x13 game 6d-m. 
+%"Game 6. DEEPHEX-MOHEX 1-0. 1.B[j2] 2.W[g8] 3.W[d10] . . . Another close game. MOHEX blunders with
+%54.W[f9]; 54.W[l11] wins. DEEPHEX sees the win soon after." 
+%Move 3 should be B[d10] I presume. 
+%Perhaps I do not understand te comments here: at move 66 I13 white seems to be winning after all? So what is wrong with 54 W[f9]? 
+%
+%ome further notes...
+%
+%First I see now why Game 13.06d-m was lost. Incredible that the program could find such elaborate moves as W[f9] or W[I11]. 
+%But when I go back a little further in the game I wonder about 30 W[b6] which is clearly too early. Human players would always play 30Wb11; 31Ba12; 32Wb12; 33Ba13 first and only then 34Wb6. Next the same sequence may happen at the right side of the board, resulting in the position of the attached game. I think this is a white win. 
+%
+%Ryan: no, solver finds black wins from this state:
+%PV j12 j11 i12 i11 h12 h11 g12 g11 f12 f10 j3 i4 i3 h4 h2 h3 i2 g3 g2 e3 f1 d2 e12 d12 e11 d11 f3 e5 g10 f11 d3 e2
+%
+%In game 13.11e-d Deephex plays remarkably indeed, discarding the obvious connection at a3. However, after 27Ba3 black would face difficulties connecting the black chain on the left to the bottom. I can see no easy win for white after 27Bk4 as played in the game. In your comment you mention that 47Wk11 would be a win for EZO. However black seems to have opportunities to defend against Wk11, of which my analysis in the attached game presents one example. Other progressions are possible too, but I did not yet find a better answer for white. All in all this game shows to me how very deep Deephex is looking into the game! 
+%
+%In the first playoff game we see white answering very far to the bottom, playing 2Wh12 instead of a usual (human) move like 2Wi10. Next 6Wc8 seems a weak move. As long as white has at least two options to connect it should postpone connecting and strengthen instead, but if white has only one remaining option it seems better to connect right away. This could result in a better position like in the commented game: 6Wb9; 7Bc9; 8Wd7; until 15Wb5. But of course black may answer differently. 
+%"Playoff Game 1. MOHEX-DEEPHEX 1-0. 1.B[a7] 2.W[h12] 3.W[c11] . . . DEEPHEX lost earlier when swapping
+%this opening, so here it does not swap. MOHEX scores gradually increased, and finds a win by move 46."
+%I guess move three has to be 3.B[c11]? 
+%I can see that in the game 47Bj6 is a winning move. 
