@@ -1,5 +1,5 @@
 game 1, Kei to start a4 swap
-game 4, Ezo wins !
+game 3, Ezo wins !
 
 note: change mohex swap value on h2
 pondering helped mohex time management
@@ -13,14 +13,24 @@ authors
 11x11 EM games
  1 em 01 a4 s B
  2 me 10 g2 s W
- 3 em 01 h2   W
- 4 me 01 a2   W
+ 3 em 10 h2   B  1st win by Ezo
+ 4 me 10 a2 s W
  5 me 01 a6   W
  6 em 10 k7 s W
  7 me 01 a2   W
  8 em 01 k5 s B
  9 em 01 k6 s B
 10 me 01 a8   W
+
+13x13 EM games
+1 me 10 a7    B
+2 em 10 a3 s  W
+3 me 01 a8    W
+4 em 01 d13   W  turned rave back on 
+5 me 10 a3    B
+6 em 01 m6 s  B
+7 me 10 l12 s W
+8 em 01 b5 w  B
 
 m opened on a2 after opening on a2 and losing ???
 operator error?
