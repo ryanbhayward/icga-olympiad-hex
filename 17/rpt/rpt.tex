@@ -122,11 +122,11 @@ soon after Benzene solved the game.
 The new program \Hite{} played strongly in the opening of
 several of its games,
 but without any virtual connection computation was unable
-to win a game against \Eo{} or \Mx{}, which both
+to win a game against \Ec{} or \Mx{}, which both
 use Benzene's virtual connection engine and endgame solver.
 For this reason, the operator chose to default its final games.
 
-The contest for gold required a four-game playoff between \Mx{} and \Eo{}.
+The contest for gold required a four-game playoff between \Mx{} and \Ec{}.
 The gold medal was not decided until the final game.
 
 \hfill\begin{tabular}{|c|c|c|c|c|c|}
@@ -268,15 +268,27 @@ The gold medal was not decided until the final game.
 \fi
 
 \section{Conclusions}
-On 11$\times$11 \Mx\ and \Eo\ seem evenly matched.
+On 11$\times$11 \Mx\ and \Ec\ seem evenly matched.
 \Mx{}'s search seems too narrow, especially near the opening.
 In positions where there are several good options,
 initial playout results often bias the final move selection,
 with the result that \Mx\ can make bad moves early in the game.
 This is the primary purpose of \Mx's book, to 
 avoid bad early move selection,
-and played a role in the final playoff game, where
-\Eo{} opened at H2.
+and played a role in the final playoff game, where \Ec{} opened 
+with 1.B[H2].  Earlier in the tournament, \Ec{} played the same opening
+and won easily after \Mx\ replied 2.W[f5], which is not on the main diagonal
+and does little to block Black's attack.
+But in the playoff game, \Mx\ replied 2.W[g5] and won.
+The weak move 2.W[f5] is presumably due to a failure to recover
+from poor initial rollouts; usually \Mx\ replies 2.W[g5].
+
+On 13$\times$13 \Mc\ seems stronger than \Ec.
+\Mc\ suffered from a lack of testing prior to the tournament.
+Consequently, it played the first three games with its rapid access value estimation (RAVE)
+feature turned off. It was clear from these games that the resulting search
+was too narrow, so RAVE was turned on for the remaining five games, which improved
+performance considerably.
 
 {\bf Acknowledgements.}
 We thank the NSERC Discovery Grant Program for research funding and
