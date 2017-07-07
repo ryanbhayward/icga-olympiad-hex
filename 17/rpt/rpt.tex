@@ -280,13 +280,16 @@ with 1.B[H2].  Earlier in the tournament, \Ec{} played the same opening
 and won easily after \Mx\ replied 2.W[f5], which is not on the main diagonal
 and does little to block Black's attack.
 But in the playoff game, \Mx\ replied 2.W[g5] and won.
-The weak move 2.W[f5] is presumably due to a failure to recover
-from poor initial rollouts; usually \Mx\ replies 2.W[g5].
+Post-tournament testing shows that \Mx\ likes both moves more than all others,
+but that the superiority of {\bf g5} to {\bf f5} is only apparent
+once at least 2 000 000 rollouts have occurred at each node.
+And if initial rollouts are unlucky, the win rate at {\bf g5} will not
+be sufficient to reach this many rollouts there.
 
 On 13$\times$13 \Mc\ seems stronger than \Ec.
 \Mc\ suffered from a lack of testing prior to the tournament.
 Consequently, it played the first three games with its rapid access value estimation (RAVE)
-feature turned off. It was clear from these games that the resulting search
+feature turned off. After these games, it was clear that the search
 was too narrow, so RAVE was turned on for the remaining five games, which improved
 performance considerably.
 
