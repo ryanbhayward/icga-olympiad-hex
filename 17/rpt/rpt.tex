@@ -8,6 +8,7 @@
 \usepackage{url}
 \usepackage{graphicx}
 \def\Eo{\mbox{\sc Ezo}}
+\def\Ec{\mbox{\sc Ezo-CNN}}
 \def\Hite{\mbox{\sc Hexcited}}
 \def\Hent{\mbox{\sc Hexcellent}}
 \def\Mx{\mbox{\sc MoHex}}
@@ -55,13 +56,13 @@ Three programs competed in each tournament.
 
 The 11$\times$11 contestants were
 \Hite{} by Ma Shengjie from China;
-\Eo{} by Kei Takada, supervised by Masahito Yamamoto, from Japan;
+\Ec{} by Kei Takada, supervised by Masahito Yamamoto, from Japan;
 and \Mx{}
 by Broderick Arneson, Ryan Hayward, Philip Henderson, Aja Huang, 
-Jakub Pawlewicz, Noah Weninger, and Kenny Young from Canada,
+Jakub Pawlewicz, Noah Weninger, and Kenny Young from Canada.
 The 13$\times$13 contestants were
 \Hent{} by Wu Tong from China;
-\Eo{}; and
+\Ec{}; and
 \Mc{} by Chao Gao from Canada.
 
 \Mx{} \citebay{HAHMP13},
@@ -79,30 +80,28 @@ with 4 cores reserved for the
 DFPNS solver \citebay{PawlH13}, which
 produces perfect play if it solves the
 position within the time allotted.
-\Mx{} uses a book ---
-built by Broderick Arneson with Thomas Lincke's method 
+\Mx{} uses a book built by Broderick Arneson with Thomas Lincke's method 
 \citebay{DBLP:conf/cg/Lincke00}. 
 Noah Weninger expanded the book and added a feature
 allowing the use of rotational symmetry for openings
 whose rotation is in the book.
 For each board size, the book covers at least eight openings.
 
-\Mc{} 
-written top of \Mx{},
-is a new version of MoHex with a convolutional neural policy net.
-At each new node of the tree, the net biases child selection by
+\Mc{} is a convolutional neural net (CNN) version of \Mx{}. 
+At each new node of the Monte Carlo search tree, 
+a policy CNN biases child selection by
 initializing child visit and win counts with artificial values.
 \Mc{} ran remotely on a machine with 2 CPUs and 1 GPU.
 
-\Eo{} is a stronger version of the program that competed in the 
-2016 Olympiad.
+\Ec{} is a CNN version of \Eo{}, which competed
+in the 2016 and previous Olympiads.
 \Eo{}, based on the Benzene framework, 
 uses iterative deepening alpha-beta search 
 with an evaluation function using a linear combination of
 two network connectivity measures \citebay{TakadaHIY15}.
-New this year, \Eo{} uses a convolutional neural policy network
+\Ec{} uses a convolutional neural policy network
 for move ordering.
-\Eo{} ran remotely on a machine
+\Ec{} ran remotely on a machine
 with two CPUs and one GPU,
 with one CPU-thread for search and one CPU-thread for
 Benzene's Depth-First Proof Number Search endgame solver.
@@ -132,9 +131,9 @@ and \Eo{}, with a new policy net.
 The result of the competition was not decided until the final game.
 
 \hfill\begin{tabular}{|c|c|c|c|c|c|}
-\hline 11x11 results &\Mx{} &\Eo{}  & \Hite{}  & total & result \\ 
+\hline 11x11 results &\Mx{} &\Ec{}  & \Hite{}  & total & result \\ 
 \hline \Mx{}         &      &  7-5  &  3-0   & 10-5  &  gold \\
-\hline \Eo{}         &  5-7 &       &  3-0   & 8-7   &  silver \\
+\hline \Ec{}         &  5-7 &       &  3-0   & 8-7   &  silver \\
 \hline \Hite{}       &  0-3 &  0-3  &        & 0-6   &  bronze \\
 \hline
 \end{tabular}\hfill~
@@ -235,9 +234,9 @@ This is the longer version, so we include all games.
 {\large\bf 13$\times$13 Tournament.}
 
 \hfill\begin{tabular}{|c|c|c|c|c|c|}
-\hline 13x13 results &\Mc{} &\Eo{}  &\Hent{} & total & result \\ 
+\hline 13x13 results &\Mc{} &\Ec{}  &\Hent{} & total & result \\ 
 \hline \Mc{}         &      &  4-0  & 4-0  & 8-0   & gold \\
-\hline \Eo{}         &  0-4 &       & 4-0  & 4-4   & silver \\
+\hline \Ec{}         &  0-4 &       & 4-0  & 4-4   & silver \\
 \hline \Hent{}         &  0-4 &  0-4  &      & 0-8   & bronze \\
 \hline
 \end{tabular}\hfill~

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  7 JUL 2017 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  7 JUL 2017 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -109,19 +109,19 @@ File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 (./rpt.aux)
 \openout1 = `rpt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 29.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -160,43 +160,38 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 29.
+(Font)              <7> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 29.
+(Font)              <5> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 29.
+(Font)              <6> on input line 30.
 File: photos/people-1.eps Graphic file (type eps)
 <photos/people-1.eps>
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
-
-Overfull \hbox (21.99103pt too wide) in paragraph at lines 56--66
-\OT1/ptm/m/n/10 Huang, Jakub Pawlewicz, Noah Weninger, and Kenny Young from Can
-ada, The 13$\OMS/cmsy/m/n/10 ^^B$\OT1/ptm/m/n/10 13 con-tes-tants were []
- []
-
-[999
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+ [999
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 121.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 121.
+(Font)              <12> on input line 120.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 120.
 
- (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-(./rpt.bbl [1000]) [1001] (./rpt.aux) ) 
+) (./rpt.bbl
+[1000]) [1001] (./rpt.aux) ) 
 Here is how much of TeX's memory you used:
- 1557 strings out of 492996
- 20332 string characters out of 6132730
- 91690 words of memory out of 5000000
- 5115 multiletter control sequences out of 15000+600000
+ 1558 strings out of 492996
+ 20334 string characters out of 6132730
+ 91703 words of memory out of 5000000
+ 5116 multiletter control sequences out of 15000+600000
  13257 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,11n,45p,315b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rpt.dvi (3 pages, 10972 bytes).
+Output written on rpt.dvi (3 pages, 10988 bytes).
