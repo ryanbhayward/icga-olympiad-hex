@@ -52,8 +52,8 @@ void translate() {
 }
 
 main() {
-  printf("/DimX 13 def\n");
-  printf("/DimY 13 def\n");
+  printf("/DimX 11 def\n");
+  printf("/DimY 11 def\n");
   printf("/Scale 1.2 def\n");
   printf("FlatTopBoard\n");
   printf("DrawHexBoard\n");

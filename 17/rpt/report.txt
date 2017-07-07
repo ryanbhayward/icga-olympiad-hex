@@ -21,6 +21,8 @@ authors
  8 em 01 k5 s B
  9 em 01 k6 s B
 10 me 01 a8   W
+11 me 10 a9   B
+12 me 10 h2   W
 
 13x13 EM games
 1 me 10 a7    B

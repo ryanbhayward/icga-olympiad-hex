@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/bin/python
 import sys
 maxmoves = 999 # print only this many
 moves = 0
