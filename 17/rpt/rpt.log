@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  7 JUL 2017 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.5.23)  8 JUL 2017 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -177,8 +177,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 121.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 121.
+(Font)              <12> on input line 120.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 120.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -189,81 +189,83 @@ File: pix/11.mh1.eps Graphic file (type eps)
 <pix/11.mh1.eps>
 File: pix/11.hm2.eps Graphic file (type eps)
  <pix/11.hm2.eps>
-File: pix/11.hm3.eps Graphic file (type eps)
- <pix/11.hm3.eps>
+File: pix/11.mh3.eps Graphic file (type eps)
+ <pix/11.mh3.eps>
+File: pix/11.hm4.eps Graphic file (type eps)
+ <pix/11.hm4.eps>
 File: pix/11.eh1.eps Graphic file (type eps)
- <pix/11.eh1.eps>
-File: pix/11.he2.eps Graphic file (type eps)
 
-<pix/11.he2.eps>
+<pix/11.eh1.eps>
+File: pix/11.he2.eps Graphic file (type eps)
+ <pix/11.he2.eps>
 File: pix/11.eh3.eps Graphic file (type eps)
  <pix/11.eh3.eps>
 File: pix/11.em1.eps Graphic file (type eps)
  <pix/11.em1.eps>
 File: pix/11.me2.eps Graphic file (type eps)
- <pix/11.me2.eps>
-File: pix/11.em3.eps Graphic file (type eps)
 
-<pix/11.em3.eps>
+<pix/11.me2.eps>
+File: pix/11.em3.eps Graphic file (type eps)
+ <pix/11.em3.eps>
 File: pix/11.me4.eps Graphic file (type eps)
  <pix/11.me4.eps>
 File: pix/11.me5.eps Graphic file (type eps)
  <pix/11.me5.eps>
 File: pix/11.em6.eps Graphic file (type eps)
- <pix/11.em6.eps>
-File: pix/11.me7.eps Graphic file (type eps)
 
-<pix/11.me7.eps>
+<pix/11.em6.eps>
+File: pix/11.me7.eps Graphic file (type eps)
+ <pix/11.me7.eps>
 File: pix/11.em8.eps Graphic file (type eps)
  <pix/11.em8.eps>
 File: pix/11.em9.eps Graphic file (type eps)
  <pix/11.em9.eps>
 File: pix/11.me10.eps Graphic file (type eps)
- <pix/11.me10.eps>
-File: pix/11.me11.eps Graphic file (type eps)
 
-<pix/11.me11.eps>
+<pix/11.me10.eps>
+File: pix/11.me11.eps Graphic file (type eps)
+ <pix/11.me11.eps>
 File: pix/11.em12.eps Graphic file (type eps)
  <pix/11.em12.eps>
 File: pix/13.hm1.eps Graphic file (type eps)
  <pix/13.hm1.eps>
 File: pix/13.mh2.eps Graphic file (type eps)
- <pix/13.mh2.eps>
-File: pix/13.eh1.eps Graphic file (type eps)
 
-<pix/13.eh1.eps>
+<pix/13.mh2.eps>
+File: pix/13.eh1.eps Graphic file (type eps)
+ <pix/13.eh1.eps>
 File: pix/13.he2.eps Graphic file (type eps)
  <pix/13.he2.eps>
 File: pix/13.eh3.eps Graphic file (type eps)
  <pix/13.eh3.eps>
 File: pix/13.he4.eps Graphic file (type eps)
- <pix/13.he4.eps>
-File: pix/13.me1.eps Graphic file (type eps)
 
-<pix/13.me1.eps>
+<pix/13.he4.eps>
+File: pix/13.me1.eps Graphic file (type eps)
+ <pix/13.me1.eps>
 File: pix/13.em2.eps Graphic file (type eps)
  <pix/13.em2.eps>
 File: pix/13.me3.eps Graphic file (type eps)
  <pix/13.me3.eps>
 File: pix/13.em4.eps Graphic file (type eps)
- <pix/13.em4.eps>
-File: pix/13.me5.eps Graphic file (type eps)
 
-<pix/13.me5.eps>
+<pix/13.em4.eps>
+File: pix/13.me5.eps Graphic file (type eps)
+ <pix/13.me5.eps>
 File: pix/13.em6.eps Graphic file (type eps)
  <pix/13.em6.eps>
 File: pix/13.me7.eps Graphic file (type eps)
  <pix/13.me7.eps>
 File: pix/13.em8.eps Graphic file (type eps)
- <pix/13.em8.eps> [1000]
-[1001] [1002] (./rpt.bbl) [1003] (./rpt.aux) ) 
+
+<pix/13.em8.eps> [1000] [1001] [1002] (./rpt.bbl [1003]) [1004] (./rpt.aux) ) 
 Here is how much of TeX's memory you used:
- 1648 strings out of 492996
- 21540 string characters out of 6132730
- 93703 words of memory out of 5000000
- 5173 multiletter control sequences out of 15000+600000
+ 1651 strings out of 492996
+ 21581 string characters out of 6132730
+ 94703 words of memory out of 5000000
+ 5175 multiletter control sequences out of 15000+600000
  13257 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,11n,45p,331b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,11n,45p,369b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rpt.dvi (5 pages, 14812 bytes).
+Output written on rpt.dvi (6 pages, 16324 bytes).

@@ -42,12 +42,12 @@ Noah Weninger \thanks{CS, UAlberta, Email:nweninge@ualberta.ca}
 \includegraphics[width=\columnwidth]{photos/people-1.eps}\
 \caption{Participants at the Hex competitions. From left,
 Masahito Yamamoto, 
-Wu Tong,
+operator for Wu Tong,
 Noah Weninger, 
 Kei Takada, 
 Ryan Hayward, 
 Ma Shengjie, 
-Wu Tong (no relation to other Wu Tong).} \end{figure}
+operator for Wu Tong.} \end{figure}
 
 \section{The Tournaments}
 There were two Hex tournaments at the 2017 Olympiad:
@@ -109,8 +109,7 @@ Benzene's Depth-First Proof Number Search endgame solver.
 \Hite{} and \Hent{} are new MCTS programs written 
 respectively by Ma Shengjie and Wu Tong
 of the Beijing Institute of Technology.
-Each ran on a laptop.
-Fellow student Wu Tong (no relation to other Wu Tong) helped operate \Hent{}.
+Each ran locally on a laptop.
 
 Each tournament was scheduled for 8 games between
 each two of the three competitors.
@@ -119,21 +118,23 @@ In most games, the losing operator resigned
 soon after Benzene solved the game.
 
 {\large\bf 11$\times$11 Tournament.}\footnote{Source files for this report, including .sgf files, at \url{https://github.com/ryanbhayward/icga-olympiad-hex}.}
-The new program \Hite{} played strongly in the opening of
-several of its games,
-but without any virtual connection computation was unable
-to win a game against \Ec{} or \Mx{}, which both
-use Benzene's virtual connection engine and endgame solver.
-For this reason, the operator chose to default its final games.
+The new program \Hite{} opened strongly in several games.
+For example, in its first game against \Mx, \Hite\ is in a strong
+position after 15 moves, but misses the promising 16.W[g3].
+
+\Ec\ and \Mx\ both use Benzene's virtual connection engine,
+which give them strong end games. \Hite{} was unable to win
+against them. For this reason \Hite's operator
+resigned once the final program ranking was decided.
 
 The contest for gold required a four-game playoff between \Mx{} and \Ec{}.
 The gold medal was not decided until the final game.
 
 \hfill\begin{tabular}{|c|c|c|c|c|c|}
 \hline 11x11 results &\Mx{} &\Ec{}  & \Hite{}  & total & result \\ 
-\hline \Mx{}         &      &  7-5  &  3-0   & 10-5  &  gold \\
+\hline \Mx{}         &      &  7-5  &  4-0   & 11-5  &  gold \\
 \hline \Ec{}         &  5-7 &       &  3-0   & 8-7   &  silver \\
-\hline \Hite{}       &  0-3 &  0-3  &        & 0-6   &  bronze \\
+\hline \Hite{}       &  0-4 &  0-3  &        & 0-7   &  bronze \\
 \hline
 \end{tabular}\hfill~
 
@@ -165,10 +166,11 @@ The gold medal was not decided until the final game.
 %{\bf Playoff Game 4.} {\sc E-M 0-1.} 1.B[h2] no swap \ldots ~ ~  W wins.
 
 \begin{figure}[hbp]
-\includegraphics[scale=1]{pix/11.mh1.eps}\hspace*{-1.2cm}\
-\includegraphics[scale=1]{pix/11.hm2.eps}\hspace*{-1.2cm}\
-\includegraphics[scale=1]{pix/11.hm3.eps}\hspace*{-1.2cm}\
-\caption{\Hite-\Mx\ Games 1-3. ~ ~ M-H 1-0 ~ ~ H-M 0-1 ~ ~ H-M 0-1}
+\includegraphics[scale=.8]{pix/11.mh1.eps}\hspace*{-1.5cm}\
+\includegraphics[scale=.8]{pix/11.hm2.eps}\hspace*{-1.5cm}\
+\includegraphics[scale=.8]{pix/11.mh3.eps}\hspace*{-1.5cm}\
+\includegraphics[scale=.8]{pix/11.hm4.eps}\hspace*{-1.5cm}\
+\caption{\Hite-\Mx\ Games 1-4. ~ ~ M-H 1-0 ~ ~ H-M 0-1 ~ ~ M-H 1-0 ~ ~ H-M 0-1}
 \end{figure}
 
 \begin{figure}[hbp]
