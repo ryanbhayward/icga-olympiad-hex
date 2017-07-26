@@ -1,11 +1,11 @@
 \documentclass{icga}
 \newif\iflong\longtrue  %toggle longtrue longfalse
-% long version has additional 
+% if there is a shorter version, it will have less material
 % \iflong
 % ... long version material ...
 % \fi
 
-\usepackage{url}
+\usepackage{hyperref,url}
 \usepackage{graphicx}
 \def\Eo{\mbox{\sc Ezo}}
 \def\Ec{\mbox{\sc Ezo-CNN}}
@@ -16,7 +16,7 @@
 \def\Sol{\mbox{\sc Solver}}
 \def\Fuego{\mbox{\sc Fuego}}
 
-\title{\sc MOHEX WINS HEX 11x11 AND 13x13 TOURNAMENTS}
+\title{\sc Hex 2017: \Mx\ wins the 11$\times$11 and 13$\times$13 tournaments}
 \runningtitle{ICGA}
 \author{Ryan Hayward\thanks{Department of Computing Science, 
 University of Alberta, Canada. Email:hayward@ualberta.ca},
@@ -34,25 +34,31 @@ Noah Weninger \thanks{CS, UAlberta, Email:nweninge@ualberta.ca}
 %\fi
 
 \vspace*{-2.25in}
-%{\it ICGA Journal Report Computer Games Olympiad, 2017 Leiden.}
 {\it to appear, ICGA Journal}
 \vspace*{2.0in}
 
 \begin{figure}[hbt]
 \includegraphics[width=\columnwidth]{photos/people-1.eps}\
 \caption{Participants at the Hex competitions. From left,
-Masahito Yamamoto, 
+Masahito Yamamoto,
 operator for Wu Tong,
-Noah Weninger, 
-Kei Takada, 
-Ryan Hayward, 
-Ma Shengjie, 
+Noah Weninger,
+Kei Takada,
+Ryan Hayward,
+Ma Shengjie,
 operator for Wu Tong.} \end{figure}
 
 \section{The Tournaments}
 There were two Hex tournaments at the 2017 Olympiad:
 board size 11$\times$11 and board size 13$\times$13.
 Three programs competed in each tournament.
+These are at present the only annual computer Hex tournaments.
+11$\times$11 is the original board size introduced by Piet Hein in 1942. 
+Recently all 1-move openings on 9$\times$9 Hex have been solved by
+computers, and two 10$\times$10 openings \citebay{PawlH13},
+so in recent years the 13$\times$13 competition --- 
+a preferred size in the Little Golem online Hex community 
+\citebay{LittleG} --- was introduced.
 
 The 11$\times$11 contestants were
 \Hite{} by Ma Shengjie from China;
@@ -63,7 +69,7 @@ Jakub Pawlewicz, Noah Weninger, and Kenny Young from Canada.
 The 13$\times$13 contestants were
 \Hent{} by Wu Tong from China;
 \Ec{}; and
-\Mc{} by Chao Gao from Canada.
+\Mc{} by Chao Gao and the \Mx\ authors from Canada.
 
 \Mx{} \citebay{HAHMP13},
 the winner of the previous seven Olympiad Hex competitions \citebay{HAHP13},
@@ -112,31 +118,44 @@ of the Beijing Institute of Technology.
 Each ran locally on a laptop.
 
 Each tournament was scheduled for 8 games between
-each two of the three competitors.
+each two of the three competitors, with 30 minutes per player per game.
 The tournaments started on July 1 and finished on July 5.
 In most games, the losing operator resigned
 soon after Benzene solved the game.
 
-{\large\bf 11$\times$11 Tournament.}\footnote{Source files for this report, including .sgf files, at \url{https://github.com/ryanbhayward/icga-olympiad-hex}.}
+{\large\bf 11$\times$11 Tournament.}\footnote{\citebay{H17olyrptsource}
+  gives .sgf game records and other source files for this report.
+  \citebay{Hexgui} gives an .sgf viewer. Smart Game Format (sgf)
+  was develop by \citebay{SGF}.}
 The new program \Hite{} opened strongly in several games.
 For example, in its first game against \Mx, \Hite\ is in a strong
 position after 15 moves, but misses the promising 16.W[g3].
 
+Due to the late arrival of \Hite,
+\Mx\ and \Ec\ played their games first.
 \Ec\ and \Mx\ both use Benzene's virtual connection engine,
-which give them strong end games. \Hite{} was unable to win
-against them. For this reason \Hite's operator
-resigned once the final program ranking was decided.
+which give strong end games, and \Hite{} was unable to win against them.
+For this reason, once the final ranking was decided,
+\Hite's operator resigned its remaining games without play.
 
-The contest for gold required a four-game playoff between \Mx{} and \Ec{}.
-The gold medal was not decided until the final game.
+The contest for gold required a four-game playoff between \Mx{} and \Ec{},
+which was not decided until the final game.
 
-\hfill\begin{tabular}{|c|c|c|c|c|c|}
-\hline 11x11 results &\Mx{} &\Ec{}  & \Hite{}  & total & result \\ 
-\hline \Mx{}         &      &  7-5  &  4-0   & 11-5  &  gold \\
-\hline \Ec{}         &  5-7 &       &  3-0   & 8-7   &  silver \\
-\hline \Hite{}       &  0-4 &  0-3  &        & 0-7   &  bronze \\
+\begin{center}
+{\bf
+Table 1 \\
+The results of the 11$\times$11 tournament
+}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline {\bf id} & {\bf 11x11} &\Mx{} &\Ec{}  & \Hite{}  
+                & {\bf Total} & {\bf Result} \\ 
+\hline {\bf M} & \Mx{}         &      &  7-5  &  4-0   & 11-5  &  Gold \\
+\hline {\bf M} & \Ec{}         &  5-7 &       &  3-0   & 8-7   &  Silver \\
+\hline {\bf M} & \Hite{}       &  0-4 &  0-3  &        & 0-7   &  Bronze \\
 \hline
-\end{tabular}\hfill~
+\end{tabular}
+\end{center}
 
 \iflong
 %This is the longer version, so we include all games.
@@ -180,7 +199,6 @@ The gold medal was not decided until the final game.
 \caption{\Hite-\Ec\ Games 1-3. ~ ~ E-H 1-0 ~ ~ H-E 0-1 ~ ~ E-H 1-0}
 \end{figure}
 
-
 \begin{figure}[hbp]
 \includegraphics[scale=1]{pix/11.em1.eps}\hspace*{-1.2cm}\
 \includegraphics[scale=1]{pix/11.me2.eps}\hspace*{-1.2cm}\
@@ -209,9 +227,13 @@ The gold medal was not decided until the final game.
 \caption{\Ec-\Mx\ Games 10-12. H-M 0-1. ~ ~ H-M 1-0 ~ ~ E-M 1-0}
 \end{figure}
 
-~
-
+\newpage
 {\large\bf 13$\times$13 Tournament.}
+For this tournament no playoff was required.
+Again, the final ranking was determined before
+all scheduled games had been played,
+so the operator of \Hent\ resigned its final games
+without play.
 %13x13 EM games
 %1 me 10 a7    B
 %2 em 10 a3 s  W
@@ -222,13 +244,21 @@ The gold medal was not decided until the final game.
 %7 me 10 l12 s W
 %8 em 01 b5 w  B
 
-\hfill\begin{tabular}{|c|c|c|c|c|c|}
-\hline 13x13 results &\Mc{} &\Ec{}  &\Hent{} & total & result \\ 
-\hline \Mc{}         &      &  6-2  & 2-0  & 8-2   & gold \\
-\hline \Ec{}         &  2-6 &       & 4-0  & 6-6   & silver \\
-\hline \Hent{}       &  0-2 &  0-4  &      & 0-6   & bronze \\
+\begin{center}
+{\bf Table 2
+
+The results of the 13$\times$13 tournament
+}
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline {\bf id} & {\bf 13x13} &\Mc{} &\Ec{}  &\Hent{} 
+                & {\bf Total} & {\bf Result} \\ 
+\hline {\bf M} & \Mc{}         &      &  6-2  & 2-0  & 8-2   & gold \\
+\hline {\bf E} & \Ec{}         &  2-6 &       & 4-0  & 6-6   & silver \\
+\hline {\bf H} & \Hent{}       &  0-2 &  0-4  &      & 0-6   & bronze \\
 \hline
-\end{tabular}\hfill~
+\end{tabular}
+\end{center}
 
 \begin{figure}[hbp]
 \hspace*{-2cm}\
