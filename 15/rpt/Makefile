@@ -1,6 +1,7 @@
 LATEX = latex
 DVIPS = dvips -t letter
-PAPERNAME = rpt15long
+#PAPERNAME = rpt15long
+PAPERNAME = rpt
 
 pdf: full good
 	ps2pdf $(PAPERNAME).ps
