@@ -16,7 +16,7 @@
 \RequirePackage{float}
 % adapted to newest version of geometry.sty (v3.2):
 \RequirePackage{fancyhdr}
-\RequirePackage[a4paper,top=1.8cm,bottom=2.54cm,outer=3.0cm,textwidth=15.8cm,twoside,includefoot,includehead,nofoot]{geometry}
+\RequirePackage[a4paper,top=1.8cm,bottom=2.54cm,outer=3.0cm,textwidth=6in,twoside,includefoot,includehead,nofoot]{geometry}
 %------------------------
 \newif\if@bibtex
 \@bibtextrue
