@@ -1,0 +1,7 @@
+put the sgf files you want in pix, each prefaced by board size
+
+then, in pix, execute as below:
+
+./sgf2hd.sh
+
+perl make10.pl
