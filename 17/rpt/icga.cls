@@ -10,7 +10,7 @@
 \ProvidesClass{icga}[2004/11/08]
 \typeout{ICGA Article class - derived from article  08/11/2004}
 % -----------------------
-\LoadClass[10pt]{article}
+\LoadClass[11pt]{article}
 % -----------------------
 \RequirePackage{ifthen} \RequirePackage{times}
 \RequirePackage{float}

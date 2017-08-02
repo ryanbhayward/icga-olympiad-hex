@@ -123,9 +123,10 @@ each two of the three competitors, with 30 minutes per player per game.
 The tournaments started on July 1 and finished on July 5.
 In most games, the losing operator resigned
 soon after Benzene solved the game.
-For example, in Figure~\ref{fig:EM1-3} we see that
-\Ec\ resigned after \Mc\ played move 22. Can you see how black wins from here?
-We give a typical playout of this game in Figure~\ref{fig:sol}.
+For some of these games, 
+e.g.\ in Figure~\ref{fig:EM1-3}a,
+we show a typical continuation after the player resigns:
+the dark (resp.\ light) stones are black (white) continuation moves.
 
 {\large\bf 11$\times$11 Tournament.}\footnote{\citebay{H17olyrptsource}
   gives .sgf game records and other source files for this report.
@@ -144,6 +145,15 @@ For this reason, once the final ranking was decided,
 
 The contest for gold required a four-game playoff between \Mx{} and \Ec{},
 which was not decided until the final game.
+
+In the games, if the second move was `swap', then the players would
+exchange colors and the first player would then play the next move.
+In our diagrams, the black stone labelled `S' indicates the first two moves,
+and the white stone labelled `3' the next move.
+
+In the figures, `A-B 1-0' indicates that A played first,
+starting as black, and A won the game 
+(as white if B swapped, as black if not).
 
 \begin{center}
 {\bf
@@ -189,11 +199,16 @@ The results of the 11$\times$11 tournament
 %{\bf Playoff Game 4.} {\sc E-M 0-1.} 1.B[h2] no swap \ldots ~ ~  W wins.
 
 \begin{figure}[hbp]
-\includegraphics[scale=.8]{pix/11.mh1.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=.8]{pix/11.hm2.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=.8]{pix/11.mh3.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=.8]{pix/11.hm4.eps}\hspace*{-1.5cm}\
-\caption{\Hite-\Mx\ Games 1-4. ~ ~ M-H 1-0 ~ ~ H-M 0-1 ~ ~ M-H 1-0 ~ ~ H-M 0-1}
+\noindent\hfill\includegraphics[scale=1]{pix/11.mh1.eps}\
+\hfill\includegraphics[scale=1]{pix/11.hm2.eps}\hfill~
+\caption{\Hite-\Mx\ Games 1-2. ~ ~ M-H 1-0 ~ ~ H-M 0-1}
+\end{figure}
+
+\begin{figure}[hbp]
+\noindent\hfill\
+\includegraphics[scale=1]{pix/11.mh3.eps}\hspace*{-1.5cm}\hfill\
+\includegraphics[scale=]{pix/11.hm4.eps}\hspace*{-1.5cm}\hfill~
+\caption{\Hite-\Mx\ Games 3-4. ~ ~ M-H 1-0 ~ ~ H-M 0-1}
 \end{figure}
 
 \begin{figure}[hbp]
@@ -204,7 +219,7 @@ The results of the 11$\times$11 tournament
 \end{figure}
 
 \begin{figure}[hbp]
-\includegraphics[scale=1]{pix/11.em1.eps}\hspace*{-1.2cm}\
+\includegraphics[scale=1]{pix/11.em1plus.eps}\hspace*{-1.2cm}\
 \includegraphics[scale=1]{pix/11.me2.eps}\hspace*{-1.2cm}\
 \includegraphics[scale=1]{pix/11.em3.eps}\hspace*{-1.2cm}\
 \caption{\Ec-\Mx\ Games 1-3. ~ ~ E-M 0-1. ~ ~ M-E 1-0 ~ ~ E-M 1-0}
@@ -298,11 +313,9 @@ The results of the 13$\times$13 tournament
 \end{figure}
 
 \begin{figure}[hbp]
-\noindent\includegraphics[scale=.9]{pix/13.me7.eps}\hspace*{-2cm}
-\includegraphics[scale=.9]{pix/13.em8.eps}\hspace*{-1cm}
-\includegraphics[scale=.9]{pix/11.em1end.eps}
-\caption{\Ec{}-\Mc\ Games 7-8. ~ M-E 1-0 ~ E-M 0-1. ~ Finish of Figure~\ref{fig:EM1-3}, Game 1.}
-\label{fig:sol}
+\hfill\includegraphics[scale=1]{pix/13.me7.eps}\hfill\
+\hfill\includegraphics[scale=1]{pix/13.em8.eps}\hfill~
+\caption{\Ec{}-\Mc\ Games 7-8. ~ ~ M-E 1-0 ~ ~ E-M 0-1}
 \end{figure}
 \fi
 
@@ -335,6 +348,6 @@ performance considerably.
 {\bf Acknowledgements.}
 We thank the NSERC Discovery Grant Program for research funding,
 Martin M\"{u}ller for the loan of his machine Firecreek, and
-Guy Haworth for many helpful comments.
+an anonymous referee for detailed feedback.
 \bibliography{rpt}
 \end{document}
