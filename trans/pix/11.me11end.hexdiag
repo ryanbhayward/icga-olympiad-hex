@@ -1,0 +1,63 @@
+/DimX 11 def
+/DimY 11 def
+/Scale 1.2 def
+FlatTopBoard
+DrawHexBoard
+1 HexBoardBorders
+AltHexBoardCoordinates
+
+9 1 (1) 1 HexBlackLabelledPiece 
+5 6 (2) 1 HexWhiteLabelledPiece 
+5 7 (3) 1 HexBlackLabelledPiece 
+6 6 (4) 1 HexWhiteLabelledPiece 
+6 7 (5) 1 HexBlackLabelledPiece 
+3 8 (6) 1 HexWhiteLabelledPiece 
+3 9 (7) 1 HexBlackLabelledPiece 
+1 10 (8) 1 HexWhiteLabelledPiece 
+1 11 (9) 1 HexBlackLabelledPiece 
+4 8 (10) 2 HexWhiteLabelledPiece 
+4 9 (11) 2 HexBlackLabelledPiece 
+2 10 (12) 2 HexWhiteLabelledPiece 
+2 11 (13) 2 HexBlackLabelledPiece 
+5 8 (14) 2 HexWhiteLabelledPiece 
+5 9 (15) 2 HexBlackLabelledPiece 
+6 8 (16) 2 HexWhiteLabelledPiece 
+6 9 (17) 2 HexBlackLabelledPiece 
+8 8 (18) 2 HexWhiteLabelledPiece 
+7 8 (19) 2 HexBlackLabelledPiece 
+8 7 (20) 2 HexWhiteLabelledPiece 
+7 7 (21) 2 HexBlackLabelledPiece 
+8 6 (22) 2 HexWhiteLabelledPiece 
+10 2 (23) 2 HexBlackLabelledPiece 
+7 5 (24) 2 HexWhiteLabelledPiece 
+7 2 (25) 2 HexBlackLabelledPiece 
+3 4 (26) 2 HexWhiteLabelledPiece 
+4 3 (27) 2 HexBlackLabelledPiece 
+5 4 (28) 2 HexWhiteLabelledPiece 
+6 10 (29) 2 HexBlackLabelledPiece 
+7 10 (30) 2 HexLightLabelledPiece 
+5 3 (31) 2 HexDarkLabelledPiece 
+9 2 (32) 2 HexLightLabelledPiece 
+10 1 (33) 2 HexDarkLabelledPiece 
+8 1 (34) 2 HexLightLabelledPiece 
+8 2 (35) 2 HexDarkLabelledPiece 
+6 2 (36) 2 HexLightLabelledPiece 
+6 3 (37) 2 HexDarkLabelledPiece 
+2 3 (38) 2 HexLightLabelledPiece 
+4 4 (39) 2 HexDarkLabelledPiece 
+3 5 (40) 2 HexLightLabelledPiece 
+4 5 (41) 2 HexDarkLabelledPiece 
+3 7 (42) 2 HexLightLabelledPiece 
+3 6 (43) 2 HexDarkLabelledPiece 
+1 7 (44) 2 HexLightLabelledPiece 
+2 7 (45) 2 HexDarkLabelledPiece 
+11 2 (46) 2 HexLightLabelledPiece 
+11 1 (47) 2 HexDarkLabelledPiece 
+1 8 (48) 2 HexLightLabelledPiece 
+2 8 (49) 2 HexDarkLabelledPiece 
+1 9 (50) 2 HexLightLabelledPiece 
+2 9 (51) 2 HexDarkLabelledPiece 
+3 10 (52) 2 HexLightLabelledPiece 
+3 11 (53) 2 HexDarkLabelledPiece 
+4 10 (54) 2 HexLightLabelledPiece 
+4 11 (55) 2 HexDarkLabelledPiece 
