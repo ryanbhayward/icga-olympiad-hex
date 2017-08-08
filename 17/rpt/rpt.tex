@@ -7,6 +7,7 @@
 
 \usepackage{hyperref,url}
 \usepackage{graphicx}
+\usepackage{float}
 \def\Eo{\mbox{\sc Ezo}}
 \def\Ec{\mbox{\sc Ezo-CNN}}
 \def\Hite{\mbox{\sc Hexcited}}
@@ -122,26 +123,32 @@ Each tournament was scheduled for 8 games between
 each two of the three competitors, with 30 minutes per player per game.
 The tournaments started on July 1 and finished on July 5.
 In many games, the losing operator resigned once Benzene solved the game.
-%For some games, 
-%e.g.\ Figure~\ref{fig:EM1-3},
-%we show a typical continuation after the game ends: 
-%dark (resp.\ light) stones are black (white) continuation moves.
+For some games, 
+we show a typical continuation after the game ends: 
+dark (resp.\ light) stones are black (white) continuation moves.
+See Figure~\ref{fig:EM11}.
+
+{\small\begin{center}
+Table 1 \\
+11$\times$11 tournament results
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline {\bf id} & {\bf 11x11} &\Mx{} &\Ec{}  & \Hite{}  
+                & {\bf Total} & {\bf Result} \\ 
+\hline {\bf M} & \Mx{}         &      &  7-5  &  4-0   & 11-5  &  Gold \\
+\hline {\bf M} & \Ec{}         &  5-7 &       &  3-0   & 8-7   &  Silver \\
+\hline {\bf M} & \Hite{}       &  0-4 &  0-3  &        & 0-7   &  Bronze \\
+\hline
+\end{tabular}
+\end{center}}
 
 \begin{figure}[htp]
-\noindent\hspace*{-1.5cm}\
-\includegraphics[scale=.9]{pix/11.mh1.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=.9]{pix/11.hm2.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=.9]{pix/11.mh3.eps}\hspace*{-1.5cm}\
+\noindent\hspace*{-1cm}\
+\includegraphics[scale=.9]{pix/11.mh1.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=.9]{pix/11.hm2.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=.9]{pix/11.mh3.eps}\hspace*{-1.8cm}\
 \includegraphics[scale=.9]{pix/11.hm4.eps}
-\caption{\Hite-\Mx\ Games 1-4. ~ M-H 1-0 ~ H-M 0-1 ~ M-H 1-0 ~ H-M 0-1}
-\end{figure}
-
-\begin{figure}[hbp]
-\noindent\
-\includegraphics[scale=1]{pix/11.eh1.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.he2.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.eh3.eps}
-\caption{\Hite-\Ec\ Games 1-3. ~ ~ E-H 1-0 ~ ~ H-E 0-1 ~ ~ E-H 1-0}
+\caption{\Hite-\Mx\ Games 1-4. M-H 1-0, H-M 0-1, M-H 1-0, H-M 0-1.}
 \end{figure}
 
 {\large\bf 11$\times$11 Tournament.}\footnote{\citebay{H17olyrptsource}
@@ -158,33 +165,58 @@ and A wins (as white if B swapped, as black if not).
 The new program \Hite{} opened strongly in several games.
 In its first game against \Mx, \Hite\ is in a strong
 position after 15 moves, but misses the promising 16.W[g3].
-
-Due to the late arrival of \Hite,
-\Mx\ and \Ec\ played their games first.
-\Ec\ and \Mx\ both use Benzene's virtual connection engine,
-which give strong end games, and \Hite{} was unable to win against them.
+Even with this move, \Hite{} would be hard pressed to beat
+\Mx: its Benzene framework includes a virtual connection engine
+that often finds a win before 
+a typical tree search detects that the game is decided.
+\Ec\ also uses the Benzene framework,
+and \Hite{} was unable to win against either opponent.
 For this reason, once the final ranking was decided,
 \Hite's operator resigned its remaining games without play.
-
+Due to the late arrival of \Hite{},
+\Mx\ and \Ec\ played their games first.
 The contest for gold required a four-game playoff between \Mx{} and \Ec{},
 which was not decided until the final game.
 
-\begin{center}
-{\bf
-Table 1 \\
-The results of the 11$\times$11 tournament
-}
+\begin{figure}[hbp]
+\noindent\
+\includegraphics[scale=1]{pix/11.eh1.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.he2.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.eh3.eps}
+\caption{\Hite-\Ec\ Games 1-3. E-H 1-0, H-E 0-1, E-H 1-0.
+In Game 1, Black finishes with one of {\bf \{e8,h7\}}.}
+\end{figure}
 
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline {\bf id} & {\bf 11x11} &\Mx{} &\Ec{}  & \Hite{}  
-                & {\bf Total} & {\bf Result} \\ 
-\hline {\bf M} & \Mx{}         &      &  7-5  &  4-0   & 11-5  &  Gold \\
-\hline {\bf M} & \Ec{}         &  5-7 &       &  3-0   & 8-7   &  Silver \\
-\hline {\bf M} & \Hite{}       &  0-4 &  0-3  &        & 0-7   &  Bronze \\
-\hline
-\end{tabular}
-\end{center}
+\begin{figure}[H]
+\noindent\
+\includegraphics[scale=1]{pix/11.em1plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.me2plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.em3plus.eps}
 
+\noindent\
+\includegraphics[scale=1]{pix/11.me4plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.me5plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.em6plus.eps}
+
+\noindent\
+\includegraphics[scale=1]{pix/11.me7plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.em8plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.em9plus.eps}
+\caption{\Ec-\Mx\ Games.
+a) 1-3. E-M 0-1, M-E 1-0, E-M 1-0.
+b) 4-6. M-E 1-0, M-E 0-1, E-M 1-0.
+c) 7-9. M-E 0-1, E-M 0-1, E-M 0-1.}
+\label{fig:EM11}
+\end{figure}
+
+\newpage
+\begin{figure}[hbp]
+\noindent
+\includegraphics[scale=1]{pix/11.me10plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.me11plus.eps}\hspace*{-1.8cm}\
+\includegraphics[scale=1]{pix/11.em12plus.eps}
+\caption{\Ec-\Mx\ Games 10-12. M-E 0-1, M-E 1-0, E-M 0-1.}
+\end{figure}
 \iflong
 %This is the longer version, so we include all games.
 %11x11 EM games
@@ -212,39 +244,6 @@ The results of the 11$\times$11 tournament
 %{\bf Playoff Game 3.} {\sc M-E 1-0.} 1.B[a9] no swap \ldots ~ ~  B wins.
 %{\bf Playoff Game 4.} {\sc E-M 0-1.} 1.B[h2] no swap \ldots ~ ~  W wins.
 
-\begin{figure}[hbp]
-\noindent\
-\includegraphics[scale=1]{pix/11.em1plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.me2plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.em3plus.eps}
-\caption{\Ec-\Mx\ Games 1-3. ~ ~ E-M 0-1 ~ ~ M-E 1-0 ~ ~ E-M 1-0}
-\label{fig:EM1-3}
-\end{figure}
-
-\begin{figure}[hbp]
-\noindent\
-\includegraphics[scale=1]{pix/11.me4plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.me5plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.em6plus.eps}
-\caption{\Ec-\Mx\ Games 4-6. ~ ~ M-E 1-0 ~ ~ M-E 0-1 ~ ~ E-M 1-0}
-\end{figure}
-
-\begin{figure}[hbp]
-\noindent\
-\includegraphics[scale=1]{pix/11.me7plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.em8plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.em9plus.eps}
-\caption{\Ec-\Mx\ Games 7-9. M-E 0-1 ~ ~ E-M 0-1 ~ ~ E-M 0-1}
-\end{figure}
-
-\begin{figure}[hbp]
-\noindent
-\includegraphics[scale=1]{pix/11.me10plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.me11plus.eps}\hspace*{-1.5cm}\
-\includegraphics[scale=1]{pix/11.em12plus.eps}
-\caption{\Ec-\Mx\ Games 10-12. M-E 0-1 ~ ~ M-E 1-0 ~ ~ E-M 0-1}
-\end{figure}
-
 {\large\bf 13$\times$13 Tournament.}
 For this tournament no playoff was required.
 Again, the final ranking was determined before
@@ -261,11 +260,9 @@ without play.
 %7 me 10 l12 s W
 %8 em 01 b5 w  B
 
-\begin{center}
-{\bf Table 2
-
-The results of the 13$\times$13 tournament
-}
+{\small\begin{center}
+Table 2 \\
+13$\times$13 tournament results
 
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline {\bf id} & {\bf 13x13} &\Mc{} &\Ec{}  &\Hent{} 
@@ -275,73 +272,68 @@ The results of the 13$\times$13 tournament
 \hline {\bf H} & \Hent{}       &  0-2 &  0-4  &      & 0-6   & bronze \\
 \hline
 \end{tabular}
-\end{center}
-
-\begin{figure}[hbp]
-\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.hm1.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.mh2.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.eh1.eps}\hspace*{-2cm}\
-\caption{\Hent{} Games 1-3. ~ ~ H-M 0-1 ~ ~ M-H 1-0 ~ ~ E-H 1-0}
-\end{figure}
-
-\begin{figure}[hbp]
-\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.he2.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.eh3.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.he4.eps}\hspace*{-2cm}\
-\caption{\Hent{} Games 4-6. ~ ~ H-E 0-1 ~ ~ E-H 1-0 ~ ~ H-E 0-1}
-\end{figure}
-
-\begin{figure}[hbp]
-\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.me1.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.em2.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.me3.eps}\hspace*{-2cm}\
-\caption{\Ec{}-\Mc\ Games 1-3. ~ ~ M-E 1-0 ~ ~ E-M 1-0 ~ ~ M-E 0-1}
-\end{figure}
-
-\begin{figure}[hbp]
-\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.em4.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.me5.eps}\hspace*{-2cm}\
-\includegraphics[scale=1]{pix/13.em6.eps}\hspace*{-2cm}\
-\caption{\Ec{}-\Mc\ Games 4-6 ~ ~ E-M 0-1 ~ ~ M-E 1-0 ~ ~ E-M 0-1}
-\end{figure}
-
-\begin{figure}[hbp]
-\noindent\
-\hfill\includegraphics[scale=1.1]{pix/13.me7.eps}\hspace*{-2cm}
-\hfill\includegraphics[scale=1.1]{pix/13.em8.eps}\hfill~
-\caption{\Ec{}-\Mc\ Games 7-8. ~ ~ M-E 1-0 ~ ~ E-M 0-1}
-\end{figure}
-\fi
+\end{center}}
 
 \section{Conclusions}
 On 11$\times$11 \Mx\ and \Ec\ seem evenly matched.
 \Mx{}'s search seems too narrow, especially near the opening.
-In positions where there are several good options,
-initial playout results often bias the final move selection,
-with the result that \Mx\ can make bad moves early in the game.
-This is the primary purpose of \Mx's book, to 
-avoid bad early move selection,
-and played a role in the final playoff game, where \Ec{} opened 
-with 1.B[H2].  Earlier in the tournament, \Ec{} played the same opening
-and won easily after \Mx\ replied 2.W[f5], which is not on the main diagonal
-and does little to block Black's attack.
+In positions with plural good-looking moves,
+initial playouts can bias final move selection, and
+\Mx\ sometimes makes a bad move early in the game.
+The purpose of \Mx's book is to avoid early bad moves.
+This played a role in the final playoff game, 
+where \Ec{} opened with 1.B[H2].  
+
+\begin{figure}[hbp]
+\noindent\hspace*{-.4cm}\
+\includegraphics[scale=.9]{pix/13.hm1.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.mh2.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.eh1.eps}
+
+\noindent\hspace*{-.4cm}\
+\includegraphics[scale=.9]{pix/13.he2.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.eh3.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.he4.eps}
+\caption{\Hent{} Games.  a) 1-3. H-M 0-1, M-H 1-0, E-H 1-0.
+b) 4-6. H-E 0-1, E-H 1-0, H-E 0-1.}
+\end{figure}
+
+In an earlier game, \Ec{} played the same opening
+and won easily after \Mx\ replied 2.W[f5], 
+which is not on the main diagonal and does little to block Black.
 But in the playoff game, \Mx\ replied 2.W[g5] and won.
 Post-tournament testing shows that \Mx\ likes both moves more than all others,
-but that the superiority of {\bf g5} to {\bf f5} is only apparent
-once at least 2 000 000 rollouts have occurred at each node.
-And if initial rollouts are unlucky, the win rate at {\bf g5} will not
-be sufficient to reach this many rollouts there.
+but that the superiority of {\bf g5} to {\bf f5} is not clear.
+If initial rollouts are unlucky, \Mx\ will not see that {\bf g5} is better.
 
 On 13$\times$13 \Mc\ seems stronger than \Ec.
 \Mc\ suffered from a lack of testing prior to the tournament.
-Consequently, it played the first three games with its rapid access value estimation (RAVE)
-feature turned off. After these games, it was clear that the search
-was too narrow, so RAVE was turned on for the remaining five games, which improved
-performance considerably.
+Consequently, it played the first three games with 
+its rapid access value estimation (RAVE)
+feature turned off. This search was too narrow, 
+so RAVE was turned on for the remaining five games, which improved
+performance.
+
+\begin{figure}[hbp]
+\noindent\hspace*{-.4cm}\
+\includegraphics[scale=.9]{pix/13.me1.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.em2.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.me3.eps}
+
+\noindent\hspace*{-.4cm}\
+\includegraphics[scale=.9]{pix/13.em4.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.me5.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.em6.eps}\
+
+\noindent\hspace*{-.4cm}\
+\includegraphics[scale=.9]{pix/13.me7.eps}\hspace*{-2cm}\
+\includegraphics[scale=.9]{pix/13.em8.eps}
+\caption{\Ec{}-\Mc\ Games. 
+a) 1-3. M-E 1-0, E-M 1-0, M-E 0-1.
+b) 4-6. E-M 0-1, M-E 1-0, E-M 0-1.
+c) 7-8. M-E 1-0, E-M 0-1.}
+\end{figure}
+\fi
 
 {\bf Acknowledgements.}
 We thank the NSERC Discovery Grant Program for research funding,
