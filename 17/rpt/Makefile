@@ -5,6 +5,11 @@ PPR = rpt
 pdf: full good
 	ps2pdf $(PPR).ps
 
+pprfigs:
+	$(LATEX) pprfigs
+	$(DVIPS) -D 600 pprfigs -o
+	ps2pdf pprfigs.ps
+
 full: figs 
 	$(LATEX) $(PPR)
 	bibtex $(PPR)
