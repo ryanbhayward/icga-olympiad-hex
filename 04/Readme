@@ -1,0 +1,57 @@
+WARNING:
+as Mike Johanson likes to remind us,
+it's not clear whether the illegal move was
+due to Mongoose or operator error;
+we were never able to duplicate the illegal move.
+RBH 2006
+**************************************************
+Warning:
+the game six logs are misleading, as explained below.
+I handtranslated the file six6 
+to show that Mongoose started and six swapped;
+the game logs show six as starting, without the swap.
+
+RBH
+************************
+
+From yngvi@ru.is Wed Jul 21 04:25:23 2004
+
+Hi,
+
+>1) it doesn't matter much,
+>but do you recall why Six started
+>first in the sixth, and last, game in Israel?
+>the sixth game should have been started by Mongoose.
+
+We restarted the game a few times.
+
+First YL played a3, f6, e6 and it looked like Six would repeat the loss =
+from the previous round. Because the operator of Six did not know how to =
+prevent this, I offered out of sportsmanship to play a different =
+opening. Six had already won the tournament and the result of this game =
+would not make a different. Also, playing a different opening would be =
+more informative for us in future analysis.
+
+We restarted the game but now with Mongoose playing b2 and Six swapping. =
+However, we accidentally played using the wrong swap-rule mode for Six, =
+so the programs were both playing towards the same side on the board.
+
+So we had to restart the game again.
+
+Mongoose started with b2 and Six swapped, but it seems to me that =
+instead of entering Swap as move into the program, I simply let the =
+program respond as a second player.
+
+
+>2) is the Israel version of Mongoose in CVS?
+>if so, could you please remind me how to access it?
+
+Yes,=20
+
+ cvs checkout project_mongoose_co
+ The source is in folder mongoose.ratio
+
+
+-Yngvi
+
+
