@@ -1,0 +1,20 @@
+w Wolve
+y Yopt
+m MoHex
+s Six
+
+e.g. ym1.sgf  Yopt opens against MoHex.
+
+Games
+1   Wolve-MoHex 0-1
+2   MoHex-Wolve 1-0
+3   Wolve-Six   0-1
+4   Six-Wolve   0-1
+5   MoHex-Six   1-0
+6   Six-MoHex   0-1
+7   Six-Yopt    0-1
+8   Yopt-Six    0-1
+9   Yopt-Wolve  0-1
+10  Wolve-Yopt  1-0
+11  Yopt-MoHex  0-1
+12  MoHex-Yopt  1-0
