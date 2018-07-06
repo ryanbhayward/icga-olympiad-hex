@@ -1,0 +1,59 @@
+26010 config: MoHex v1.0.GIT Jun 15 2017.
+26010 config: ============ InitializeSystem ============
+26010 config: BenzeneProgram::InitRandom()
+26010 config: Seed = 1522352885
+26010 info: Prior Patterns:
+26010 info: Global:
+26010 info: Size            = 565 32648 
+26010 info: TableEntries    = 65932 65910
+26010 info: MirrorsAdded    = 0 0
+26010 info: PrunableCount   = 30593 30629
+26010 info: LargestGamma    = 5820.77
+26010 info: SmallestGamma   = 6.6e-05
+26010 info: Local:
+26010 info: Size            = 550 5318 
+26010 info: TableEntries    = 11602 11588
+26010 info: MirrorsAdded    = 0 0
+26010 info: PrunableCount   = 3659 3667
+26010 info: LargestGamma    = 11281.8
+26010 info: SmallestGamma   = 0.026235
+26010 info: Playout Patterns:
+26010 info: Global:
+26010 info: Size            = 565 32648 
+26010 info: TableEntries    = 70329 70329
+26010 info: MirrorsAdded    = 4397 4419
+26010 info: PrunableCount   = 30593 30629
+26010 info: LargestGamma    = 5820.77
+26010 info: SmallestGamma   = 6.6e-05
+26010 info: Local:
+26010 info: Size            = 550 5318 
+26010 info: TableEntries    = 11602 11588
+26010 info: MirrorsAdded    = 0 0
+26010 info: PrunableCount   = 3659 3667
+26010 info: LargestGamma    = 11281.8
+26010 info: SmallestGamma   = 0.026235
+26010 config: IcePatternSet: reading from '/Users/hayward/hex/benzene/share/ice-patterns.txt'.
+26010 config: IcePatternSet: parsed 708 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: IcePatternSet: reading from '/Users/hayward/hex/benzene/share/ice-patterns.txt'.
+26010 config: IcePatternSet: parsed 708 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: VCS: reading captured set patterns from '/Users/hayward/hex/benzene/share/vc-captured-set.txt'.
+26010 config: VCS:: parsed 2 patterns.
+26010 config: ============ BenzeneShutdown =============
+26010 config: MoHexProgram:: ShutdownSystem()
+26010 config: CommonProgram:: ShutdownSystem()
+26010 config: BenzeneProgram:: ShutdownSystem()
+Flushing and closing this stream...

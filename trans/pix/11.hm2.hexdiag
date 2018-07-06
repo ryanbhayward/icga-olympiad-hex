@@ -1,0 +1,56 @@
+/DimX 11 def
+/DimY 11 def
+/Scale 1.2 def
+FlatTopBoard
+DrawHexBoard
+1 HexBoardBorders
+AltHexBoardCoordinates
+
+2 3 (1) 1 HexBlackLabelledPiece 
+2 3 (S) 1 HexBlackLabelledPiece
+6 6 (3) 1 HexWhiteLabelledPiece 
+6 7 (4) 1 HexBlackLabelledPiece 
+5 7 (5) 1 HexWhiteLabelledPiece 
+4 9 (6) 1 HexBlackLabelledPiece 
+3 9 (7) 1 HexWhiteLabelledPiece 
+4 8 (8) 1 HexBlackLabelledPiece 
+3 8 (9) 1 HexWhiteLabelledPiece 
+4 7 (10) 2 HexBlackLabelledPiece 
+3 7 (11) 2 HexWhiteLabelledPiece 
+2 11 (12) 2 HexBlackLabelledPiece 
+3 10 (13) 2 HexWhiteLabelledPiece 
+4 6 (14) 2 HexBlackLabelledPiece 
+3 6 (15) 2 HexWhiteLabelledPiece 
+4 5 (16) 2 HexBlackLabelledPiece 
+3 5 (17) 2 HexWhiteLabelledPiece 
+4 4 (18) 2 HexBlackLabelledPiece 
+3 4 (19) 2 HexWhiteLabelledPiece 
+3 11 (20) 2 HexBlackLabelledPiece 
+4 10 (21) 2 HexWhiteLabelledPiece 
+4 11 (22) 2 HexBlackLabelledPiece 
+4 3 (23) 2 HexWhiteLabelledPiece 
+6 10 (24) 2 HexBlackLabelledPiece 
+1 11 (25) 2 HexWhiteLabelledPiece 
+2 10 (26) 2 HexBlackLabelledPiece 
+1 10 (27) 2 HexWhiteLabelledPiece 
+2 9 (28) 2 HexBlackLabelledPiece 
+7 9 (29) 2 HexWhiteLabelledPiece 
+7 10 (30) 2 HexBlackLabelledPiece 
+5 10 (31) 2 HexWhiteLabelledPiece 
+5 11 (32) 2 HexBlackLabelledPiece 
+1 9 (33) 2 HexWhiteLabelledPiece 
+2 8 (34) 2 HexBlackLabelledPiece 
+1 8 (35) 2 HexWhiteLabelledPiece 
+2 7 (36) 2 HexBlackLabelledPiece 
+1 7 (37) 2 HexWhiteLabelledPiece 
+2 6 (38) 2 HexBlackLabelledPiece 
+8 9 (39) 2 HexWhiteLabelledPiece 
+8 10 (40) 2 HexBlackLabelledPiece 
+9 9 (41) 2 HexWhiteLabelledPiece 
+9 10 (42) 2 HexBlackLabelledPiece 
+1 6 (43) 2 HexWhiteLabelledPiece 
+2 5 (44) 2 HexBlackLabelledPiece 
+11 9 (45) 2 HexWhiteLabelledPiece 
+10 11 (46) 2 HexBlackLabelledPiece 
+11 10 (47) 2 HexWhiteLabelledPiece 
+11 11 (48) 2 HexBlackLabelledPiece 
