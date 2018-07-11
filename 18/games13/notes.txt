@@ -2,3 +2,10 @@
 game 2: both programs saw White's score drop shortly after move 12.W[e8].
 then each player saw their scores rise, until around move 44 when
 White saw that it was in trouble.
+
+pondering helped mohex, predicted many moves
+
+for the most part, the programs were evenly matched...
+except occasionally ezo would play a move that mohex did not
+think was the best move, and then ezo's score would drop a bit...
+mohex's value (average minimax) seems surprisingly robust
