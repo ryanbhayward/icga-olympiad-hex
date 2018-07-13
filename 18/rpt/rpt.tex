@@ -12,6 +12,7 @@
 \def\Ec{\mbox{\sc Ezo-CNN}}
 \def\Mx{\mbox{\sc MoHex}}
 \def\Mc{\mbox{\sc MoHex-CNN}}
+\def\Mt{\mbox{\sc MoHex-3HNN}}
 \def\Sol{\mbox{\sc Solver}}
 \def\Fuego{\mbox{\sc Fuego}}
 
@@ -22,7 +23,7 @@
 \def\thepage{}
 \begin{frontmatter}              % The preamble begins here.
 %\pretitle{Pretitle}
-\title{MoHex defeats Ezo in 2018 Hex competitions}
+\title{MoHex3HNN defeats EzoCNN in 2018 Hex tournaments}}
 
 \markboth{}{2018 New Taipei City Computer Games Olympiad Report: to appear in ICGA Journal}
 %\markboth{R.~Hayward and N.~Weninger / Hex 2017: \Mx\ wins 11$\times$11 and 13$\times$13 tournaments}
@@ -36,7 +37,7 @@ hayward@ualberta.ca.}} and
 \address{Department of Computing Science, University of Alberta, Canada}
 %\address[B]{Department of Computing Science, University of Alberta, Canada}
 \end{frontmatter}
-\markboth{Hayward, Gao and Takada}{Hex 2018: \Mx\ defeats \Eo}
+\markboth{Hayward, Gao and Takada}{Hex 2018: \Mt\ defeats \Ec}
 
 %\begin{figure}[hbt]
 %\includegraphics[width=\columnwidth]{photos/people-1.eps}\
@@ -50,43 +51,51 @@ hayward@ualberta.ca.}} and
 %Wu Tong.} \end{figure}
 %
 \section{The Tournaments}
-There were two Hex competitions at the 
-2018 Olympiad in New Taipei City,
+There were two Hex tournaments at the 
+2018 Olympiad in New Taipei City:
 board-size 11$\times$11 and 
-board-size 13$\times$13.\footnote{\cite{H17olyrptsource} gives .sgf 
-  game records and other source files for this report.
-  \cite{Hexgui} gives an SGF (Smart Game Format) viewer.
+board-size 13$\times$13.\footnote{\cite{H17olyrptsource} has .sgf 
+  game records and source files for this report.
+  \cite{Hexgui} has an SGF (Smart Game Format) viewer.
   SGF was developed by \cite{SGF}.}
-11$\times$11 is the original board size introduced by Piet Hein in 1942. 
-All 1-move openings on 9$\times$9 Hex have been solved by
-computers, as have two 10$\times$10 openings \cite{PawlH13}.
-In recent years a 13$\times$13 competition ---
-a size used by the Little Golem online Hex community \cite{LittleG} ---
+11$\times$11 Hex is the original game introduced by Piet Hein in 1942. 
+All one-move openings on all $n$$\times$$n$ Hex boards up to 9$\times$9
+have been solved by computers, as have two 10$\times$10 openings 
+\cite{PawlH13}.
+11$\times$11 games can typically be solved after only 20 to 30 moves
+by a computer solver, so in recent years
+a tournament on the 13$\times$13 board  ---
+a size used by the Little Golem hex community \cite{LittleG} ---
 was introduced.
 
 %13 J b2 a3 c12 (b11 a2 c2)
 %11 J j2 b4(?) (c2 c10)
 
-The 11$\times$11 contestants were 
-\Ec{} by Kei Takada, supervised by Masahito Yamamoto, from Japan;
-and \Mx{} by Chao Gao, supervised by Ryan Hayward and Martin M\"{u}ller, 
-from Canada, with the assistance of
+Each tournament had the same two contestants:
+\Ec{} from Japan, 
+by Kei Takada (supervised by Masahito Yamamoto);
+and \Mt{} from Canada,
+by Chao Gao (supervised by Ryan Hayward and Martin M\"{u}ller),
+assisted by 
 Jakub Pawlewicz,
 Ashley Herman,
 Joseph Meleshko,
 Jiahao Li,
 Paul Banse,
 Siqi Yan,
-Wai Yi Low,
-Xutong Zhao,
-Openings were picked  by Jakub Pawlewicz based
-on his opening book program.
+Wai Yi Low
+and
+Xutong Zhao.
+Opening moves were based on self-play game statistics.
+The self-play game generation procedure was developed
+by Gao and Pawlewicz.
 
-\Mc\ is an AlphaGo-style neural net program that shares
+\Mt\ is an AlphaGo-style neural net program that shares
 much code from the earlier MoHex 2.0 by 
-Broderick Arneson, Ryan Hayward, Philip Henderson, Aja Huang, 
-Jakub Pawlewicz, Noah Weninger, and Kenny Young.
-\Mc\ won the previous
+Broderick Arneson, Philip Henderson, Aja Huang, 
+Jakub Pawlewicz, Noah Weninger, Kenny Young and Ryan Hayward.
+MoHex versions
+won the previous
 eight Olympiad Hex competitions \cite{HAHP13},
 TODO REF 2017
 is an MCTS program that uses the Benzene Hex framework
@@ -109,27 +118,33 @@ allowing the use of rotational symmetry for openings
 whose rotation is in the book.
 For each board size, the book covers at least eight openings.
 
-\Mc{} is a convolutional neural net (CNN) version of \Mx{}. 
+\Mt{}, the successor of \Mc,
+uses a three-head convolutional neural net (CNN)
+with 128 filters per layer \cite{ijcai}
+and was trained on 400 000 self-play games.
 At each new node of the Monte Carlo search tree, 
-a policy CNN biases child selection by
-initializing child visit and win counts with artificial values.
-\Mc{} ran remotely on a machine with two CPUs and one GPU.
+the three-headed neural net is called
+and returns policy, state, and action values.
+\Mt{} ran remotely on a machine with four CPU cores and one GPU.
 
-\Ec{} is a CNN version of \Eo{}, which competed
-in the 2016 and previous Olympiads.
 \Eo{}, based on the Benzene framework, 
 uses iterative deepening alpha-beta search 
-with an evaluation function using a linear combination of
-two network connectivity measures \cite{TakadaHIY15}.
-\Ec{} uses a convolutional neural policy network
-for move ordering.
+with policy and value functions
+learned from 10 000 000 self-play games
+generated by minimax search.
 \Ec{} ran remotely on a machine
-with two CPUs and one GPU,
+with two CPUs and one GPU.
+In some games the internet connection was dropped
+and computation restarted on a  laptop.
 with one CPU-thread for search and one CPU-thread for
 Benzene's Depth-First Proof Number Search endgame solver.
 
 Each tournament was scheduled for 8 games between
 each two of the three competitors, with 30'/game per player.
+The 13$\times$13 and 11$\times$11 tournaments were played
+on July 8 and 9 respectively.
+
+
 The tournaments started on July 1 and finished on July 5.
 See Tables~\ref{tab:tour1} and \ref{tab:tour2} and Figures 2-7.
 In many games, the losing operator resigned once Benzene solved the game.
