@@ -1,0 +1,509 @@
+%!PS-Adobe-3.0
+%%Creator: Jack van Rijswijck, thanks to Cameron Browne
+%%BoundingBox: 0 0 175 108
+%%Pages: 0
+%%EndComments
+
+/OriginX -6 def
+/OriginY 99 def
+%---------------- Variables -------------------
+
+/DimX 11 def
+/DimY 11 def
+/Scale 1.2 def
+
+
+% draw  Hex boards, any size ... but labels only up to 26x26
+% based on code by Cameron Browne, revised by Jack vR, revised by RBH
+%-------------- state initializations -------------------------
+1 setlinejoin   % lines meet at a point  ==>    use round join
+%---------------- constants -------------------
+/Root3Div2  0.86602540378444 def
+/Chars   {[(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)(l)(m)
+           (n)(o)(p)(q)(r)(s)(t)(u)(v)(w)(x)(y)(z)]} def
+/CharsUC {[(A)(B)(C)(D)(E)(F)(G)(H)(I)(J)(K)(L)(M)
+           (N)(O)(P)(Q)(R)(S)(T)(U)(V)(W)(X)(Y)(Z)]} def
+/Digits  {[(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)
+           (14)(15)(16)(17)(18)(19)(20)(21)(22)(23)(24)(25)(26)]} def
+/HexRadius      5 Scale mul def % hexagon center-to-corner distance 
+/HexLineWidth 0.1 Scale mul def 
+/CircleRadius 4.0 Scale mul def 
+/CircleLineWidth 0.346 Scale mul def 
+/PerimeterWidth 0.5 Scale mul def 
+/TextHeight 6.0 def
+/TextWidth TextHeight 0.45 mul def 
+%/Dark 0.65 def
+/DotSize 1.3 def
+/CoordinatesShade 0.5 def
+/BoardShade 0.8 def
+/DarkShade  0.57 def
+/LightShade 0.87 def
+%/MarkerSize 1.2 def
+/MarkerSize  .7 def
+/CellOrientation 1 def   % 1: flat bottom  0: pointed bottom
+/CellCorner [ % 6 cell corners, wrt center 0 0, plus "up" and "down"
+   [ HexRadius  neg       0                           ] 
+   [ HexRadius 2 div neg  HexRadius Root3Div2 mul neg ]
+   [ HexRadius 2 div      HexRadius Root3Div2 mul neg ]
+   [ HexRadius            0                           ]
+   [ HexRadius 2 div      HexRadius Root3Div2 mul     ]
+   [ HexRadius 2 div neg  HexRadius Root3Div2 mul     ]
+   [ 0                    HexRadius Root3Div2 mul     ]
+   [ 0                    HexRadius Root3Div2 mul neg ]
+] def
+%----- name cell corner indices ... see below
+/Left  0 def /DownLeft 1 def /DownRight 2 def 
+/Right 3 def /UpRight  4 def /UpLeft    5 def 
+/Up    6 def /Down     7 def
+%-----------------------------------------------------
+% cell orientations:  flat bottom    flat side
+%-----------------------------------------------------
+% flat bottom 
+% board cell indices            cell corner/top/bottom indices
+%             --
+%           /    \
+%        --   1,3  --                  5 -6- 4
+%      /    \    /    \               /       \
+%   --   1,2  --   2,3  --           0         3
+% /    \    /    \    /    \          \       /
+%   1,1  --   2,2  --   3,3            1 -7- 2
+% \    /    \    /    \    /
+%   --   2,1  --   3,2  --
+%      \    /    \    /   
+%        --   3,1  --     
+%----------------------------------------------------
+% flat side 
+%    /  \  /  \  /  \                       5
+%   | 11 || 12 || 13 ||                   /   6
+%    \  /  \  /  \  /  \                 0     4
+%     || 21 || 22 || 23 |                |     |
+%       \  /  \  /  \  /  \              1     3
+%        || 31 || 32 || 33 |              7   /
+%-------------------------------------------2--------
+%----------- procedures -------------
+/ScalePoint { % stack: ... x y size ==> ...  x*size y*size
+   3 dict begin /size exch def /y exch def /x exch def
+   x size mul           y size mul
+end } def
+
+/FlatTopBoard { FlatSideCells } def
+
+/FlatSideCells {  % redefine cell orientation for flat side
+  /CellOrientation 0 def   
+  /CellCorner [ % 6 cell corners, wrt center 0 0  %xcoord ycoord
+    [HexRadius Root3Div2 mul neg  HexRadius 2 div     ]
+    [HexRadius Root3Div2 mul neg  HexRadius 2 div neg ]
+    [0                            HexRadius neg ]
+    [HexRadius Root3Div2 mul      HexRadius 2 div neg ]
+    [HexRadius Root3Div2 mul      HexRadius 2 div ]
+    [0                            HexRadius ]
+    [HexRadius Root3Div2 2 div mul HexRadius 0.75 mul ]
+    [HexRadius Root3Div2 2 div mul neg HexRadius 0.75 mul neg ]
+  ] def
+} def
+
+/HexCenterPoint { % center of cell (i,j)
+    2 dict begin /j exch def /i exch def
+    CellOrientation 1 eq {
+    OriginX i j add HexRadius mul 1.5 mul add %Ox + (i+j)*HR*1.5
+    OriginY i j sub HexRadius mul Root3Div2 mul sub %Oy - (i-j)*HR*R3/2
+    }{
+    OriginX i 2 j mul add HexRadius mul Root3Div2 mul add  %Ox + (2i+j)*HR
+    OriginY i 1 sub HexRadius mul 1.5 mul sub %Oy - i*HR*R3/2
+    } ifelse
+end } def
+ 
+/HxgnCorner { 5 dict begin /corn exch def /j exch def /i exch def
+    i j HexCenterPoint /y exch def /x exch def
+    x CellCorner corn get 0 get add
+    y CellCorner corn get 1 get add
+end } def
+
+/Go { 2 dict begin /corn exch def /mag exch def
+   % rlineto in a cell orientation direction
+   CellCorner corn get aload pop mag ScalePoint rlineto
+end } def
+
+/TurnGo { rotate 1.0 Left Go } def % call: degrees TurnGo
+/MagTurnGo { rotate Left Go } def % call: mag degrees TurnGo
+
+/HexagonPath { % call: i j HexagonPath
+    newpath 
+    UpRight HxgnCorner moveto 
+    6 { 1.0 Left Go 60 rotate } repeat 
+} def
+
+/FillAndStroke { 2 dict begin /sh exch def /wdth exch def
+    gsave sh setgray fill
+    grestore 0 setgray wdth setlinewidth stroke
+end } def
+
+/ShadedHexagon { 3 dict begin /shade exch def /j exch def /i exch def
+    i j HexagonPath
+    0 shade FillAndStroke
+end } def
+
+/Hexagon { % stack: ... i j
+    HexagonPath 
+    HexLineWidth BoardShade FillAndStroke
+} def
+
+/SemiHexagonPath { % stack: ... top i j
+    newpath 
+    1 eq { Left HxgnCorner moveto 
+        1.0 UpRight Go 1.0 Right Go 1.0 DownRight Go stroke }{
+        Right HxgnCorner moveto 
+        1.0 DownLeft Go 1.0 Left Go 1.0 UpLeft Go stroke
+    } ifelse
+} def
+
+/HexBoardPerimeter {
+    newpath
+    1 DimY UpRight HxgnCorner moveto 1.0 Left Go                      
+    DimY 1 sub { 60 TurnGo 300 TurnGo } repeat 60 TurnGo 60 TurnGo
+    DimX 1 sub { 60 TurnGo 300 TurnGo } repeat 60 TurnGo 
+    DimY 1 sub { 60 TurnGo 300 TurnGo } repeat 60 TurnGo 60 TurnGo
+    DimX 1 sub { 60 TurnGo 300 TurnGo } repeat 60 rotate %restore rotation
+} def
+
+%----------- Havannah coordinates ----------------------
+%                   ..  ..  ..
+%                 d1  c2  b3  a4
+%                   c1  b2  a3
+%                     b1  a2
+%                       a1
+/HavannahPosn { % convert to usual coordinate, so ... x y  =>  ... 1+DimX-x  y
+    exch DimX 1 add exch sub exch 
+} def
+
+/HavannahBoardPerimeter {
+    newpath
+    1 DimX UpRight HxgnCorner moveto 1.0 Left Go                      
+    6 {Base 1 sub { 60 TurnGo 300 TurnGo } repeat 60 TurnGo } repeat
+} def
+
+/DrawHexBoard { 2 dict begin
+    gsave
+    HexBoardPerimeter 
+    PerimeterWidth BoardShade FillAndStroke
+    HexLineWidth setlinewidth
+    1 1 DimY { /j exch def
+	1 1 DimX { /i exch def
+	   i j 1 SemiHexagonPath stroke
+	} for } for
+    grestore
+end } def
+
+/DrawHavannahBoard { 3 dict begin
+    /Base DimX 1 add 2 idiv  def
+    gsave
+    HavannahBoardPerimeter 
+    PerimeterWidth BoardShade FillAndStroke
+    HexLineWidth setlinewidth
+    1 1 Base { /j exch def
+	Base j 1 sub sub 1 DimX { /i exch def
+	   i j 1 SemiHexagonPath stroke
+	} for } for
+    1 1 Base 1 sub { /j exch def
+	1 1 DimX j sub { /i exch def
+	   i j Base add 1 SemiHexagonPath stroke
+	} for } for
+    grestore
+end } def
+
+/DrawHexBorder{ 6 dict begin /start exch def 
+    /cells exch def /isBlack exch def /which exch def
+    gsave
+    which UpLeft eq {1 DimY 1 add start sub Up HxgnCorner moveto /d Left def /r 60 def} if
+    which UpRight eq {start DimY Up HxgnCorner moveto /d Right def /r 300 def} if
+    which DownLeft eq {DimX 1 add start sub 1 Down HxgnCorner moveto /d Left def /r 300 def} if
+    which DownRight eq {DimX start Down HxgnCorner moveto /d Right def /r 60 def} if
+    0.5 d Go 
+    which UpRight eq which DownRight eq or {180 rotate} if
+    r TurnGo 
+    cells 1 sub {360 r sub TurnGo r TurnGo} repeat
+    0.5 360 r sub MagTurnGo 1.5 360 r sub 2 mul MagTurnGo
+    cells 1 sub {360 r sub TurnGo r TurnGo} repeat
+    0.75 360 r sub MagTurnGo
+    closepath isBlack 1 eq {gsave fill grestore} if stroke grestore
+end } def
+
+/NoDrawHexBoard {  % dummy, used in creating bounding box
+} def
+
+/HexBoardBottom { 1 dict begin
+    /upperLeftBlack exch def
+    PerimeterWidth setlinewidth 0 setgray
+    DownRight upperLeftBlack       DimY 1 DrawHexBorder
+end } def
+
+/HexBoardBorders { 1 dict begin
+    /upperLeftBlack exch def
+    PerimeterWidth setlinewidth 0 setgray
+    UpLeft    upperLeftBlack       DimY 1 DrawHexBorder
+    UpRight   1 upperLeftBlack sub DimX 1 DrawHexBorder
+    DownRight upperLeftBlack       DimY 1 DrawHexBorder
+    DownLeft  1 upperLeftBlack sub DimX 1 DrawHexBorder
+end } def
+
+/YBoardPerimeter {
+    newpath 1 1 DownRight HxgnCorner moveto 180 rotate
+    3 { DimX 1 sub { 300 TurnGo 60 TurnGo } repeat 
+        60 TurnGo 60 TurnGo} 
+    repeat % now restore initial rotation state
+    180 rotate % closepath
+} def
+
+/DrawYBoard { 2 dict begin
+    YBoardPerimeter 
+    PerimeterWidth BoardShade FillAndStroke
+    HexLineWidth setlinewidth
+    1 1 DimX {/j exch def
+        1 1 DimX 1 add j sub {/i exch def
+	    i j 1 SemiHexagonPath stroke
+        } for } for
+end } def
+
+/FontSelect { % bold italic FontSelect
+    2 dict begin /italic exch def /bold exch def
+    bold {
+	italic 
+	{ /Times-BoldItalic findfont TextHeight scalefont setfont } 
+	{ /Times-Bold findfont TextHeight scalefont setfont }
+	ifelse} 
+        {
+	italic {/Times-Italic findfont TextHeight scalefont setfont} 
+	{ /Times findfont TextHeight scalefont setfont }
+	ifelse}
+    ifelse
+end } def
+	    
+/LabelString {   % call: i j (str) strlen LabelString
+%  to use with board rotation, remove comments
+    6 dict begin /strlen exch def /str exch def /j exch def /i exch def
+    newpath
+    i j HexCenterPoint /y exch def /x exch def
+    %BoardRotation rotate
+    x y moveto 
+    %360 BoardRotation sub rotate
+    TextWidth strlen mul 0.5 mul neg TextHeight 0.33 mul neg rmoveto
+    str show 
+end } def
+
+/AbsLabelString { 4 dict begin
+    /strlen exch def /str exch def /y exch def /x exch def
+    newpath
+    x AbsCoordX TextWidth strlen mul 0.5 mul sub
+    y AbsCoordY TextHeight 0.33 mul sub
+    moveto
+    str
+    show
+end } def
+
+/LabelStringVerb { % i j (str) strlen shade bold italic LabelStringVerb
+    7 dict begin /italic exch def /bold exch def /shade exch def
+    /strlen exch def /str exch def /j exch def /i exch def
+    bold italic FontSelect shade setgray
+    i j str strlen LabelString
+end } def
+
+/HexBoardCoordinates { 2 dict begin
+    false true FontSelect CoordinatesShade setgray
+    1 1 DimX { /i exch def
+	i 0          Chars i 1 sub get 1 LabelString
+	i DimY 1 add Chars i 1 sub get 1 LabelString
+    } for
+    1 1 DimY { /j exch def
+	0 j Digits j 1 sub get DimY 9 gt {2} {1} ifelse LabelString
+	DimX 1 add j Digits j 1 sub get DimY 9 gt {2} {1} ifelse LabelString
+    } for
+end } def
+
+/HavannahBoardCoordinates { 3 dict begin
+    false true FontSelect CoordinatesShade setgray
+    /Base DimX 1 add 2 idiv  def
+    1 1 Base { /i exch def
+	i 0 HavannahPosn Chars  i 1 sub get 1 LabelString
+	0 i HavannahPosn Digits i 1 sub get 
+	    DimX 9 gt {2} {1} ifelse LabelString
+    } for
+    1 1 Base 1 sub { /i exch def
+	i Base add i HavannahPosn Chars  i Base add 1 sub get 1 LabelString
+	i i Base add HavannahPosn Digits i Base add 1 sub get 
+	    DimX 9 gt {2} {1} ifelse LabelString
+    } for
+end } def
+
+/AltHexBoardCoordinates { 2 dict begin
+    false true FontSelect CoordinatesShade setgray
+    1 1 DimY { /j exch def
+	0 j Chars j 1 sub get 1 LabelString
+        DimX 1 add j Chars j 1 sub get 1 LabelString
+    } for
+    1 1 DimX { /i exch def
+	i 0 Digits i 1 sub get DimX 9 gt {2} {1} ifelse LabelString
+	i DimY 1 add Digits i 1 sub get DimX 9 gt {2} {1} ifelse LabelString
+    } for
+end } def
+
+/HexDot { 3 dict begin /size exch def /j exch def /i exch def
+    newpath
+    i j HexCenterPoint size 0 360 arc
+    0 setgray 0 setlinewidth fill
+end } def
+
+/HexWhiteMarkedPiece { 2 dict begin /j exch def /i exch def 
+    i j HexWhitePiece 
+    newpath
+    i j HexCenterPoint MarkerSize 0 360 arc
+    0 setgray 0 setlinewidth fill
+end } def
+
+/HexBlackMarkedPiece { 2 dict begin /j exch def /i exch def 
+    i j HexBlackPiece 
+    newpath
+    i j HexCenterPoint MarkerSize 0 360 arc
+    1 setgray 0 setlinewidth fill
+end } def
+
+/HexDoubleMarker { 6 dict begin
+    /shaderight exch def /shadeleft exch def /j exch def /i exch def
+    i j HexCenterPoint /y exch def /x exch def
+    gsave
+    newpath
+    x MarkerSize sub y MarkerSize 0 360 arc
+    shadeleft setgray 0 setlinewidth fill
+    newpath
+    x MarkerSize sub y MarkerSize 0 360 arc
+    0 setgray CircleLineWidth setlinewidth stroke
+    newpath
+    x MarkerSize add y MarkerSize 0 360 arc
+    shaderight setgray 0 setlinewidth fill
+    newpath
+    x MarkerSize add y MarkerSize 0 360 arc
+    0 setgray CircleLineWidth setlinewidth stroke
+    grestore
+end } def
+
+/HexBlackWhiteMarker { 0.0 1.0 HexDoubleMarker } def
+
+/HexWhiteBlackMarker { 1.0 0.0 HexDoubleMarker } def
+        
+/HexMarker { 2 dict begin /j exch def /i exch def
+    newpath
+    i j HexCenterPoint MarkerSize 0 360 arc
+    0 setlinewidth fill
+    newpath
+    i j HexCenterPoint MarkerSize 0 360 arc
+    0 setgray CircleLineWidth setlinewidth stroke  
+end } def
+
+/HexBlackMarker { 2 dict begin /j exch def /i exch def
+    0 setgray
+    i j HexMarker
+end } def
+
+/HexWhiteMarker { 2 dict begin /j exch def /i exch def
+    1 setgray
+    i j HexMarker
+end } def
+    
+/HexPiece { 3 dict begin /shade exch def /j exch def /i exch def
+    newpath
+    i j HexCenterPoint CircleRadius 0 360 arc
+    CircleLineWidth shade FillAndStroke
+end } def
+
+/HexWhitePiece { 1.0 HexPiece } def
+
+/HexBlackPiece { 0.0 HexPiece } def
+
+/HexShadePiece { 1 dict begin /shade exch def shade HexPiece } def
+
+/HexWhiteLabelledPiece { % i j (str) strlen
+    4 dict begin /strlen exch def /str exch def /j exch def /i exch def
+    i j HexWhitePiece
+    i j str strlen 0.0 true true LabelStringVerb
+end } def
+
+/HexLightLabelledPiece { % i j (str) strlen
+    4 dict begin /strlen exch def /str exch def /j exch def /i exch def 
+    i j LightShade HexShadePiece
+    i j str strlen 0.0 true true LabelStringVerb
+end } def
+
+/HexBlackLabelledPiece { % i j (str) strlen
+    4 dict begin /strlen exch def /str exch def /j exch def /i exch def 
+    i j HexBlackPiece
+    i j str strlen 1.0 true true LabelStringVerb
+end } def
+
+/HexDarkLabelledPiece { % i j (str) strlen
+    4 dict begin /strlen exch def /str exch def /j exch def /i exch def 
+    i j DarkShade HexShadePiece
+    i j str strlen 1.0 true true LabelStringVerb
+end } def
+
+/AbsCoordX { 1 dict begin /x exch def
+    OriginX x Scale mul add
+end } def
+
+/AbsCoordY { 1 dict begin /y exch def
+    OriginY y Scale mul add
+end } def
+
+/DrawBox { /maxy exch def /maxx exch def /miny exch def /minx exch def
+    newpath
+    minx miny moveto
+    maxx minx sub 0 rlineto
+    0 maxy miny sub rlineto
+    minx maxx sub 0 rlineto
+    0 miny maxy sub rlineto
+    HexLineWidth setlinewidth
+    0 setgray
+    stroke
+} def
+
+%%---------------- Program -------------------
+
+FlatTopBoard
+DrawHexBoard
+1 HexBoardBorders
+AltHexBoardCoordinates
+
+2 3 (1) 1 HexBlackLabelledPiece 
+7 5 (2) 1 HexWhiteLabelledPiece 
+6 7 (3) 1 HexBlackLabelledPiece 
+5 7 (4) 1 HexWhiteLabelledPiece 
+8 2 (5) 1 HexBlackLabelledPiece 
+10 4 (6) 1 HexWhiteLabelledPiece 
+6 6 (7) 1 HexBlackLabelledPiece 
+5 4 (8) 1 HexWhiteLabelledPiece 
+5 2 (9) 1 HexBlackLabelledPiece 
+6 2 (10) 2 HexWhiteLabelledPiece 
+10 3 (11) 2 HexBlackLabelledPiece 
+4 6 (12) 2 HexWhiteLabelledPiece 
+5 8 (13) 2 HexBlackLabelledPiece 
+4 8 (14) 2 HexWhiteLabelledPiece 
+5 5 (15) 2 HexBlackLabelledPiece 
+4 5 (16) 2 HexWhiteLabelledPiece 
+4 9 (17) 2 HexBlackLabelledPiece 
+3 9 (18) 2 HexWhiteLabelledPiece 
+2 11 (19) 2 HexBlackLabelledPiece 
+3 10 (20) 2 HexWhiteLabelledPiece 
+3 11 (21) 2 HexBlackLabelledPiece 
+4 10 (22) 2 HexWhiteLabelledPiece 
+4 11 (23) 2 HexBlackLabelledPiece 
+5 10 (24) 2 HexWhiteLabelledPiece 
+5 11 (25) 2 HexBlackLabelledPiece 
+8 9 (26) 2 HexWhiteLabelledPiece 
+6 10 (27) 2 HexBlackLabelledPiece 
+2 9 (28) 2 HexWhiteLabelledPiece 
+1 11 (29) 2 HexBlackLabelledPiece 
+6 9 (30) 2 HexWhiteLabelledPiece 
+7 9 (31) 2 HexBlackLabelledPiece 
+
+
+%------------ Trailer --------------
+
+showpage
