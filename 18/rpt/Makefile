@@ -21,7 +21,7 @@ good: $(PPR).dvi
 	$(DVIPS) -D 600 $(PPR) -o
 
 cleanup:
-	-@rm $(PPR).dvi $(PPR).blg $(PPR).bbl $(PPR).aux $(PPR).log
+	-@rm $(PPR).dvi $(PPR).blg $(PPR).bbl $(PPR).aux $(PPR).log $(PPR).out
 	#-@rm games/hexdiag/*.hexdiag
 
 clean: cleanup
