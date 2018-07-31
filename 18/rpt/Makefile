@@ -25,7 +25,7 @@ cleanup:
 	#-@rm games/hexdiag/*.hexdiag
 
 clean: cleanup
-	-@rm $(PPR).ps $(PPR).pdf
+	-@rm $(PPR).ps
 
 figs:
 	#(cd games/hexdiag; perl make10.pl)
